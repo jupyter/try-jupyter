@@ -1,0 +1,109 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2022-02-22T15:00:06.937798Z",
+      "format": null,
+      "last_modified": "2022-02-22T14:59:01.093320Z",
+      "mimetype": null,
+      "name": "ipycanvas.ipynb",
+      "path": "pyolite/ipycanvas.ipynb",
+      "size": 4332,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2022-02-22T15:00:06.933798Z",
+      "format": null,
+      "last_modified": "2022-02-22T14:59:01.093320Z",
+      "mimetype": null,
+      "name": "interactive-widgets.ipynb",
+      "path": "pyolite/interactive-widgets.ipynb",
+      "size": 6095,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2022-02-22T15:00:06.937798Z",
+      "format": null,
+      "last_modified": "2022-02-22T14:59:01.093320Z",
+      "mimetype": null,
+      "name": "plotly.ipynb",
+      "path": "pyolite/plotly.ipynb",
+      "size": 3736,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2022-02-22T15:00:06.937798Z",
+      "format": null,
+      "last_modified": "2022-02-22T14:59:01.093320Z",
+      "mimetype": null,
+      "name": "renderers.ipynb",
+      "path": "pyolite/renderers.ipynb",
+      "size": 1711,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2022-02-22T15:00:06.937798Z",
+      "format": null,
+      "last_modified": "2022-02-22T14:59:01.093320Z",
+      "mimetype": null,
+      "name": "matplotlib.ipynb",
+      "path": "pyolite/matplotlib.ipynb",
+      "size": 37201,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2022-02-22T15:00:06.937798Z",
+      "format": null,
+      "last_modified": "2022-02-22T14:59:01.093320Z",
+      "mimetype": null,
+      "name": "ipyleaflet.ipynb",
+      "path": "pyolite/ipyleaflet.ipynb",
+      "size": 6436,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2022-02-22T15:00:06.933798Z",
+      "format": null,
+      "last_modified": "2022-02-22T14:59:01.093320Z",
+      "mimetype": null,
+      "name": "folium.ipynb",
+      "path": "pyolite/folium.ipynb",
+      "size": 5088,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2022-02-22T15:00:06.933798Z",
+      "format": null,
+      "last_modified": "2022-02-22T14:59:01.093320Z",
+      "mimetype": null,
+      "name": "altair.ipynb",
+      "path": "pyolite/altair.ipynb",
+      "size": 6337,
+      "type": "notebook",
+      "writable": true
+    }
+  ],
+  "created": "2022-02-22T15:00:06.937798Z",
+  "format": "json",
+  "last_modified": "2022-02-22T15:00:06.937798Z",
+  "mimetype": null,
+  "name": "pyolite",
+  "path": "pyolite",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}
