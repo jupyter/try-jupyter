@@ -6,7 +6,7 @@ A tour of Jupyter and IPython, powered by JupyterLite and deployed to GitHub Pag
 
 ## ✨ Try it in your browser ✨
 
-➡️ **https://jtpio.github.io/try-jupyter**
+➡️ **https://jupyter.org/try-jupyter**
 
 ## Demo Guide
 
