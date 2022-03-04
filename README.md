@@ -1,6 +1,6 @@
 # Try Jupyter, powered by JupyterLite
 
-[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jtpio.github.io/try-jupyter)
+[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jupyter.org/try-jupyter)
 
 A tour of Jupyter and IPython, powered by JupyterLite.
 
