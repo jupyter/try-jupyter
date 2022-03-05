@@ -9,6 +9,8 @@ on:
       - '*'
 
 permissions:
+  actions: write
+  deployments: write
   pages: write
 
 jobs:
