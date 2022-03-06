@@ -2,9 +2,9 @@
   "content": [
     {
       "content": null,
-      "created": "2022-03-05T14:52:33.700342Z",
+      "created": "2022-03-06T16:37:41.997135Z",
       "format": null,
-      "last_modified": "2022-03-05T14:51:44.805259Z",
+      "last_modified": "2022-03-06T16:36:57.125588Z",
       "mimetype": null,
       "name": "Lorenz.ipynb",
       "path": "notebooks/Lorenz.ipynb",
@@ -14,21 +14,21 @@
     },
     {
       "content": null,
-      "created": "2022-03-05T14:52:33.700342Z",
+      "created": "2022-03-06T16:37:41.997135Z",
       "format": null,
-      "last_modified": "2022-03-05T14:51:44.805259Z",
+      "last_modified": "2022-03-06T16:36:57.125588Z",
       "mimetype": null,
       "name": "sqlite.ipynb",
       "path": "notebooks/sqlite.ipynb",
-      "size": 20453,
+      "size": 20451,
       "type": "notebook",
       "writable": true
     },
     {
       "content": null,
-      "created": "2022-03-05T14:52:33.696342Z",
+      "created": "2022-03-06T16:37:41.997135Z",
       "format": null,
-      "last_modified": "2022-03-05T14:51:44.805259Z",
+      "last_modified": "2022-03-06T16:36:57.125588Z",
       "mimetype": null,
       "name": "Intro.ipynb",
       "path": "notebooks/Intro.ipynb",
@@ -37,9 +37,9 @@
       "writable": true
     }
   ],
-  "created": "2022-03-05T14:52:33.700342Z",
+  "created": "2022-03-06T16:37:41.997135Z",
   "format": "json",
-  "last_modified": "2022-03-05T14:52:33.700342Z",
+  "last_modified": "2022-03-06T16:37:41.997135Z",
   "mimetype": null,
   "name": "notebooks",
   "path": "notebooks",
