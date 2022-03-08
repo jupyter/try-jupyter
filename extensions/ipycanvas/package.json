@@ -1,6 +1,6 @@
 {
   "name": "ipycanvas",
-  "version": "0.10.2",
+  "version": "0.11.0",
   "description": "Interactive widgets library exposing the browser's Canvas API",
   "keywords": [
     "jupyter",
@@ -30,7 +30,7 @@
     "url": "https://github.com/martinRenou/ipycanvas"
   },
   "scripts": {
-    "build": "yarn run build:lib && yarn run build:nbextension",
+    "build": "yarn run build:lib && yarn run build:nbextension && yarn run build:labextension",
     "build:lib": "tsc",
     "build:nbextension": "webpack",
     "build:labextension": "jupyter labextension build .",
@@ -68,6 +68,7 @@
   },
   "jupyterlab": {
     "extension": "lib/plugin",
+    "webpackConfig": "webpack.lab.config.js",
     "outputDir": "ipycanvas/labextension",
     "sharedPackages": {
       "@jupyter-widgets/base": {
@@ -76,7 +77,7 @@
       }
     },
     "_build": {
-      "load": "static/remoteEntry.5ffed1c4b9b9ce1f7b00.js",
+      "load": "static/remoteEntry.d3f93277b65928cb96a9.js",
       "extension": "./extension"
     }
   }
