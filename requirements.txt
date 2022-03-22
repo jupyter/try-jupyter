@@ -10,6 +10,6 @@ jupyterlab-fasta>=3,<4
 jupyterlab-geojson>=3,<4
 jupyterlab-tour
 jupyterlite==0.1.0b4
-jupyterlite-xeus-sqlite==0.2.0
+jupyterlite-xeus-sqlite==0.1.2
 plotly>=5,<6
 theme-darcula
