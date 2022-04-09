@@ -72,7 +72,7 @@
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.f372bf1de02fb50ae6e0.js",
+        "load": "static/remoteEntry.730e734f0ef88fa439e8.js",
         "mimeExtension": "./mimeExtension",
         "name": "jupyterlab-plotly"
       },
@@ -81,6 +81,13 @@
         "liteExtension": false,
         "load": "static/remoteEntry.5a1869d4304cb9223cfc.js",
         "name": "jupyterlab-tour",
+        "style": "./style"
+      },
+      {
+        "extension": "./extension",
+        "liteExtension": false,
+        "load": "static/remoteEntry.fc1c31abb754cd005250.js",
+        "name": "jupyterlab_pygments",
         "style": "./style"
       }
     ],
