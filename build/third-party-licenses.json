@@ -512,133 +512,133 @@
     },
     {
       "name": "@jupyterlite/app-lab",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/app-repl",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/app-retro",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/application",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/application-extension",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/contents",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/iframe-extension",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/javascript-kernel",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/javascript-kernel-extension",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/kernel",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/licenses",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/localforage",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/pyolite-kernel",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/pyolite-kernel-extension",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/repl-extension",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/retro-application-extension",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/server",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/server-extension",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/session",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/settings",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/translation",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlite/ui-components",
-      "versionInfo": "0.1.0-beta.4",
+      "versionInfo": "0.1.0-beta.5",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
@@ -1262,7 +1262,7 @@
     },
     {
       "name": "minimist",
-      "versionInfo": "1.2.5",
+      "versionInfo": "1.2.6",
       "licenseId": "MIT",
       "extractedText": "This software is released under the MIT license:\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the \"Software\"), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\nFOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\nIN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\nCONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
     },
@@ -1274,7 +1274,7 @@
     },
     {
       "name": "moment",
-      "versionInfo": "2.29.1",
+      "versionInfo": "2.29.2",
       "licenseId": "MIT",
       "extractedText": "Copyright (c) JS Foundation and other contributors\n\nPermission is hereby granted, free of charge, to any person\nobtaining a copy of this software and associated documentation\nfiles (the \"Software\"), to deal in the Software without\nrestriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the\nSoftware is furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\nOF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT\nHOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nWHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.\n"
     },

@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab_pygments",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "Pygments theme using JupyterLab CSS variables",
   "keywords": [
     "jupyter",
@@ -85,7 +85,7 @@
     "extension": true,
     "outputDir": "jupyterlab_pygments/labextension",
     "_build": {
-      "load": "static/remoteEntry.fc1c31abb754cd005250.js",
+      "load": "static/remoteEntry.aa1060b2d1221f8e5688.js",
       "extension": "./extension",
       "style": "./style"
     }

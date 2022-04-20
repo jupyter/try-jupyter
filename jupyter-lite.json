@@ -2,7 +2,7 @@
   "jupyter-config-data": {
     "appName": "Try Jupyter!",
     "appUrl": "./lab",
-    "appVersion": "0.1.0-beta.4",
+    "appVersion": "0.1.0-beta.5",
     "baseUrl": "./",
     "disabledExtensions": [
       "@jupyterlab/server-proxy",
@@ -60,13 +60,13 @@
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.8f5cefaa26fbae099326.js",
+        "load": "static/remoteEntry.6375e54406c677384240.js",
         "name": "jupyter-leaflet"
       },
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.0a859bd5f4f46047146d.js",
+        "load": "static/remoteEntry.710d0093522e0289f99a.js",
         "name": "jupyter-matplotlib"
       },
       {
@@ -86,7 +86,7 @@
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.fc1c31abb754cd005250.js",
+        "load": "static/remoteEntry.aa1060b2d1221f8e5688.js",
         "name": "jupyterlab_pygments",
         "style": "./style"
       }
