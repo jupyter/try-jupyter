@@ -3614,6 +3614,9 @@
       "Cloning\u2026": [
         "Clonage en cours\u2026"
       ],
+      "Close": [
+        "Fermer"
+      ],
       "Close all opened files to avoid conflicts": [
         "Fermer tous les fichiers ouverts pour \u00e9viter les conflits"
       ],
@@ -3632,6 +3635,12 @@
       "Commit": [
         "Commit"
       ],
+      "Commit (Amend)": [
+        "Soumettre (en amendant)"
+      ],
+      "Commit (Amend) and Push": [
+        "Soumettre (en amendant) et Pousser"
+      ],
       "Commit and Push": [
         "Commit et Push"
       ],
@@ -3646,6 +3655,12 @@
       ],
       "Common Ancestor": [
         "Anc\u00eatre commun"
+      ],
+      "Compare %1 and %2": [
+        "Comparer %1 et %2"
+      ],
+      "Compare with selected": [
+        "Comparer avec la s\u00e9lection"
       ],
       "Conflicted": [
         "Avec conflits"
@@ -4030,6 +4045,12 @@
       "No actions available": [
         "Aucune action disponible"
       ],
+      "No challenger commit selected.": [
+        "Aucun commit \u00e0 comparer s\u00e9lectionn\u00e9."
+      ],
+      "No changes": [
+        "Aucune modification"
+      ],
       "No history found.": [
         "Aucun historique trouv\u00e9."
       ],
@@ -4185,6 +4206,12 @@
       ],
       "SHOW": [
         "Afficher"
+      ],
+      "Save my login temporarily": [
+        "Enregistrer temporairement ma connexion"
+      ],
+      "Select for compare": [
+        "S\u00e9lectionner pour comparaison"
       ],
       "Select the branch to merge in %1": [
         "S\u00e9lectionnez la branche \u00e0 fusionner dans %1"
@@ -4384,11 +4411,20 @@
       "You are not currently in": [
         "Vous n'\u00eates pas actuellement dans"
       ],
+      "You have unsaved staged files. You probably want to save and stage all needed changes before committing.": [
+        "Vous avez des fichiers index\u00e9s non enregistr\u00e9s. Vous voulez probablement enregistrer et ajouter \u00e0 l'index toutes les modifications avant de les soumettre."
+      ],
+      "You have unsaved tracked files. You probably want to save all changes before committing.": [
+        "Vous avez des fichiers suivis non enregistr\u00e9s. Vous voulez probablement enregistrer toutes les modifications avant de les soumettre."
+      ],
       "Your changes to the following files would be overwritten by switching:": [
         "Vos modifications apport\u00e9es aux fichiers suivants seraient \u00e9cras\u00e9es:"
       ],
       "Your current changes forbid pulling the latest changes. Do you want to permanently discard those changes? This action cannot be undone.": [
         "Vos modifications actuelles interdisent d'extraire les derni\u00e8res modifications. Voulez-vous supprimer d\u00e9finitivement ces modifications ? Cette action ne peut pas \u00eatre annul\u00e9e."
+      ],
+      "credentials required": [
+        "identifiants requis"
       ],
       "git command not found - please ensure you have Git > 2 installed": [
         "commande git est introuvable - veuillez vous assurer que Git > 2 est install\u00e9"
@@ -5033,6 +5069,117 @@
       ],
       "try to find known language servers in sys.prefix (and elsewhere)": [
         "essaye de trouver des serveurs de langage connus dans sys.prefix (et ailleurs)"
+      ]
+    },
+    "jupyterlab_search_replace": {
+      "": {
+        "domain": "jupyterlab_search_replace",
+        "language": "fr-FR",
+        "plural_forms": "nplurals=2; plural=(n > 1);",
+        "version": "jupyterlab"
+      },
+      "%2 result(s) in %1 file": [
+        "%2 results in %1 files",
+        "%2 correspondance(s) dans %1 fichier",
+        "%2 correspondances dans %1 fichiers"
+      ],
+      "Cancel": [
+        "Annuler"
+      ],
+      "Collapse All": [
+        "Tout r\u00e9duire"
+      ],
+      "Exclude file filters": [
+        "Filtres d'exclusion de fichiers"
+      ],
+      "Expand All": [
+        "Tout d\u00e9velopper"
+      ],
+      "Include file filters": [
+        "Filtres d'inclusion de fichiers"
+      ],
+      "Match Case": [
+        "Sensible \u00e0 la Casse"
+      ],
+      "Match Whole Word": [
+        "Correspondance du Mot Entier"
+      ],
+      "Maximal number of matches is reached for this file. You can increase it in the settings.": [
+        "Le nombre maximum de correspondances est atteint pour ce fichier. Vous pouvez l'augmenter dans les param\u00e8tres."
+      ],
+      "No results found.": [
+        "Aucune correspondance n'a \u00e9t\u00e9 trouv\u00e9e."
+      ],
+      "Refresh": [
+        "Actualiser"
+      ],
+      "Replace": [
+        "Remplacer"
+      ],
+      "Replace %2 matche(s) accross %1 file with %3? This cannot be undone.": [
+        "Replace %2 matches accross %1 files with %3? This cannot be undone.",
+        "Remplacer %2 correspondance(s) dans %1 fichier par %3? Cette action est irr\u00e9versible.",
+        "Remplacer %2 correspondances dans %1 fichiers par %3? Cette action est irr\u00e9versible."
+      ],
+      "Replace All": [
+        "Tout Remplacer"
+      ],
+      "Replace All in File": [
+        "Tout Remplacer dans le Fichier"
+      ],
+      "Search": [
+        "Rechercher"
+      ],
+      "Search Files for Text": [
+        "Rechercher des fichiers pour le texte"
+      ],
+      "Search and Replace": [
+        "Rechercher et Remplacer"
+      ],
+      "Skip confirmation next time.": [
+        "Ne plus demander de confirmation."
+      ],
+      "Toggle Replace": [
+        "Montrer/Cacher le remplacement"
+      ],
+      "Toggle Search Filters": [
+        "Montrer/Cacher les filtres"
+      ],
+      "Use Regular Expression": [
+        "Utiliser une expression r\u00e9guli\u00e8re"
+      ],
+      "You have unsaved changes. The result(s) may be inexact. Save your work and refresh.": [
+        "Vous avez des modifications non enregistr\u00e9es. Le ou les r\u00e9sultats peuvent \u00eatre inexacts. Enregistrez votre travail et rafra\u00eechissez."
+      ],
+      "e.g. *.py, src/**/exclude": [
+        "p. ex. *.py, src/**/exclure"
+      ],
+      "e.g. *.py, src/**/include": [
+        "p. ex. *.py, src/**/inclure"
+      ],
+      "schema\u0004Search across Files": [
+        "Rechercher dans les fichiers"
+      ],
+      "schema\u0004Search and Replace across Files Settings": [
+        "Param\u00e8tres pour Rechercher et Remplacer dans les Fichiers"
+      ],
+      "settings\u0004Ask confirmation before replacing all": [
+        "Demander confirmation avant de tout remplacer"
+      ],
+      "settings\u0004Configure glob patterns for excluding files and folders in full text searches.": [
+        "Configurez les r\u00e8gles d'exclusion de fichiers et de dossiers dans les recherches ."
+      ],
+      "settings\u0004Exclude": [
+        "Exclus"
+      ],
+      "settings\u0004Maximal lines count per file": [
+        "Nombre maximum de lignes par fichier"
+      ],
+      "settings\u0004Maximal number of matching lines per file to report. The total number of matches per file can be greater if there are multiple matches per line.": [
+        "Nombre maximal de lignes contentant des correspondances par fichier \u00e0 signaler. Le nombre total de correspondances par fichier peut \u00eatre sup\u00e9rieur \u00e0 cette limite s'il y a plusieurs correspondances par ligne."
+      ],
+      "settings\u0004Whether to display a confirmation dialog before replacing all matches or not.": [
+        "Demander une confirmation avant de remplacer toutes les correspondances ou non."
       ]
     },
     "jupyterlab_spreadsheet_editor": {
