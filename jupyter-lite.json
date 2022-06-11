@@ -2,7 +2,7 @@
   "jupyter-config-data": {
     "appName": "Try Jupyter!",
     "appUrl": "./lab",
-    "appVersion": "0.1.0-beta.7",
+    "appVersion": "0.1.0-beta.8",
     "baseUrl": "./",
     "disabledExtensions": [
       "@jupyterlab/server-proxy",
@@ -72,7 +72,7 @@
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.730e734f0ef88fa439e8.js",
+        "load": "static/remoteEntry.e2bf80f6515beeab9026.js",
         "mimeExtension": "./mimeExtension",
         "name": "jupyterlab-plotly"
       },
@@ -95,8 +95,7 @@
     "fullMathjaxUrl": "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js",
     "fullStaticUrl": "./build",
     "licensesUrl": "./lab/api/licenses",
-    "mathjaxConfig": "TeX-AMS_CHTML-full,Safe",
-    "preferredPath": "/"
+    "mathjaxConfig": "TeX-AMS_CHTML-full,Safe"
   },
   "jupyter-lite-schema-version": 0
 }
