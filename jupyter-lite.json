@@ -2,7 +2,7 @@
   "jupyter-config-data": {
     "appName": "Try Jupyter!",
     "appUrl": "./lab",
-    "appVersion": "0.1.0-beta.9",
+    "appVersion": "0.1.0-beta.10",
     "baseUrl": "./",
     "disabledExtensions": [
       "@jupyterlab/server-proxy",
@@ -15,7 +15,7 @@
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.3421943a0ce73f10909d.js",
+        "load": "static/remoteEntry.1bd01b57743def902f73.js",
         "name": "@jupyter-widgets/jupyterlab-manager"
       },
       {
@@ -72,7 +72,7 @@
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.e2bf80f6515beeab9026.js",
+        "load": "static/remoteEntry.66500334d7b36213676e.js",
         "mimeExtension": "./mimeExtension",
         "name": "jupyterlab-plotly"
       },
