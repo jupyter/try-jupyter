@@ -2,9 +2,9 @@
   "content": [
     {
       "content": null,
-      "created": "2022-07-01T16:55:09.358646Z",
+      "created": "2022-08-17T10:58:21.728911Z",
       "format": null,
-      "last_modified": "2022-07-01T16:55:09.358646Z",
+      "last_modified": "2022-08-17T10:58:21.728911Z",
       "mimetype": null,
       "name": "data",
       "path": "data",
@@ -14,9 +14,9 @@
     },
     {
       "content": null,
-      "created": "2022-07-01T16:55:09.354646Z",
+      "created": "2022-08-17T10:58:21.728911Z",
       "format": null,
-      "last_modified": "2022-07-01T16:55:07.290593Z",
+      "last_modified": "2022-08-17T10:58:20.036910Z",
       "mimetype": "text/markdown",
       "name": "README.md",
       "path": "README.md",
@@ -26,9 +26,9 @@
     },
     {
       "content": null,
-      "created": "2022-07-01T16:55:09.358646Z",
+      "created": "2022-08-17T10:58:21.732911Z",
       "format": null,
-      "last_modified": "2022-07-01T16:55:09.358646Z",
+      "last_modified": "2022-08-17T10:58:21.732911Z",
       "mimetype": null,
       "name": "notebooks",
       "path": "notebooks",
@@ -37,9 +37,9 @@
       "writable": true
     }
   ],
-  "created": "2022-07-01T16:55:09.358646Z",
+  "created": "2022-08-17T10:58:21.732911Z",
   "format": "json",
-  "last_modified": "2022-07-01T16:55:09.358646Z",
+  "last_modified": "2022-08-17T10:58:21.732911Z",
   "mimetype": null,
   "name": "",
   "path": "",

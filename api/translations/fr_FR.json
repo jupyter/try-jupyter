@@ -624,6 +624,9 @@
       "Decrease UI Font Size": [
         "Diminuer la taille de police de l'interface"
       ],
+      "Default: %1": [
+        "Valeur par d\u00e9faut : %1"
+      ],
       "Delete": [
         "Supprimer"
       ],
@@ -796,6 +799,11 @@
       ],
       "Execute with Shift+Enter": [
         "Ex\u00e9cuter avec Maj + Entr\u00e9e"
+      ],
+      "Executed %1 cell": [
+        "Executed %1 cells",
+        "%1 cellule ex\u00e9cut\u00e9e",
+        "%1 cellules ex\u00e9cut\u00e9es"
       ],
       "Executed %1 request": [
         "Executed %1 requests",
@@ -2812,7 +2820,7 @@
         "Ajouter des \u00e9l\u00e9ments d'accessibilit\u00e9 \u00e0 utiliser avec les lecteurs d'\u00e9cran."
       ],
       "settings\u0004An item is defined by a 'name', a 'command' name, and an 'icon' name": [
-        "Un \u00e9l\u00e9ment est d\u00e9fini par un nom 'name', une commande 'command' et un nom d'ic\u00f4ne 'icon'"
+        "Un \u00e9l\u00e9ment est d\u00e9fini par un nom `name`, une commande `command` et un nom d'ic\u00f4ne `icon`"
       ],
       "settings\u0004Application Context Menu": [
         "Menu contextuel de l'application"
@@ -3301,7 +3309,7 @@
         "Barre lat\u00e9rale"
       ],
       "settings\u0004Start mode: ``, `single`or `multiple`": [
-        "Mode d'affichage: '', 'single' (document unique) ou 'multiple' (multi documents)"
+        "Mode d'affichage: ``, `single` (document unique) ou `multiple` (multi documents)"
       ],
       "settings\u0004Status Bar": [
         "Barre d'\u00e9tat"
@@ -4144,6 +4152,9 @@
       "Open .gitignore": [
         "Ouvrir .gitignore"
       ],
+      "Open File": [
+        "Ouvrir le fichier"
+      ],
       "Open File Failed": [
         "L'ouverture du fichier a \u00e9chou\u00e9"
       ],
@@ -4152,6 +4163,9 @@
       ],
       "Open a New Terminal to the Git Repository": [
         "Ouvrez un Nouveau Terminal dans le D\u00e9p\u00f4t Git"
+      ],
+      "Open file from its diff view": [
+        "Ouvrir le fichier depuis sa vue de diff\u00e9rences"
       ],
       "Open selected file": [
         "Ouvrir le fichier s\u00e9lectionn\u00e9"

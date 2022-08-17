@@ -2,8 +2,9 @@
   "jupyter-config-data": {
     "appName": "Try Jupyter!",
     "appUrl": "./lab",
-    "appVersion": "0.1.0-beta.10",
+    "appVersion": "0.1.0-beta.12",
     "baseUrl": "./",
+    "defaultKernelName": "python",
     "disabledExtensions": [
       "@jupyterlab/server-proxy",
       "@jupyterlite/javascript-kernel-extension",
@@ -42,7 +43,7 @@
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.bf6b3192a558615425cd.js",
+        "load": "static/remoteEntry.8a4c97071917cf84832f.js",
         "name": "@telamonian/theme-darcula"
       },
       {
@@ -60,7 +61,7 @@
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.6375e54406c677384240.js",
+        "load": "static/remoteEntry.87c5f425be4cc49a1717.js",
         "name": "jupyter-leaflet"
       },
       {
@@ -72,7 +73,7 @@
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.66500334d7b36213676e.js",
+        "load": "static/remoteEntry.249e02ea9427f8cca2ad.js",
         "mimeExtension": "./mimeExtension",
         "name": "jupyterlab-plotly"
       },
