@@ -1,6 +1,6 @@
 {
   "name": "jupyter-matplotlib",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "description": "Matplotlib Jupyter Interactive Widget",
   "author": "Matplotlib Development team",
   "license": "BSD-3-Clause",
@@ -50,7 +50,7 @@
       }
     },
     "_build": {
-      "load": "static/remoteEntry.509ecd914d0df11eb8e1.js",
+      "load": "static/remoteEntry.6b5d328600b8f618f724.js",
       "extension": "./extension"
     }
   },
@@ -85,7 +85,7 @@
     "webpack-cli": "^4.0.0"
   },
   "dependencies": {
-    "@jupyter-widgets/base": "^2 || ^3 || ^4.0.0",
+    "@jupyter-widgets/base": "^2 || ^3 || ^4 || ^5 || ^6",
     "@types/node": "^14.14.35",
     "lodash": "^4.17.21"
   },

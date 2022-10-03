@@ -2,7 +2,7 @@
   "jupyter-config-data": {
     "appName": "Try Jupyter!",
     "appUrl": "./lab",
-    "appVersion": "0.1.0-beta.12",
+    "appVersion": "0.1.0-beta.13",
     "baseUrl": "./",
     "defaultKernelName": "python",
     "disabledExtensions": [
@@ -16,7 +16,7 @@
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.1bd01b57743def902f73.js",
+        "load": "static/remoteEntry.1116b848a6f7126bf3e9.js",
         "name": "@jupyter-widgets/jupyterlab-manager"
       },
       {
@@ -49,25 +49,25 @@
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.af71ba374fc8128e6506.js",
+        "load": "static/remoteEntry.99c828c2ee313756f7dc.js",
         "name": "bqplot"
       },
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.84a5fbcaf1830473e5a0.js",
+        "load": "static/remoteEntry.9693baf6fc7fc4c880d2.js",
         "name": "ipycanvas"
       },
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.87c5f425be4cc49a1717.js",
+        "load": "static/remoteEntry.826666d2e0fe36d6609e.js",
         "name": "jupyter-leaflet"
       },
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.509ecd914d0df11eb8e1.js",
+        "load": "static/remoteEntry.6b5d328600b8f618f724.js",
         "name": "jupyter-matplotlib"
       },
       {
