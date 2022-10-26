@@ -34,7 +34,6 @@ jobs:
       - name: Upload dist
         uses: actions/upload-pages-artifact@v1
         with:
-          name: jupyterlite-demo-dist-${{ github.run_number }}
           path: ./dist
 
   deploy:
