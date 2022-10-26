@@ -2,7 +2,7 @@
   "jupyter-config-data": {
     "appName": "Try Jupyter!",
     "appUrl": "./lab",
-    "appVersion": "0.1.0-beta.13",
+    "appVersion": "0.1.0-beta.14",
     "baseUrl": "./",
     "defaultKernelName": "python",
     "disabledExtensions": [
@@ -61,7 +61,7 @@
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.826666d2e0fe36d6609e.js",
+        "load": "static/remoteEntry.a397b41514ddde5db0df.js",
         "name": "jupyter-leaflet"
       },
       {
