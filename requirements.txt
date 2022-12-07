@@ -3,7 +3,7 @@ ipycanvas>=0.9.1
 ipyleaflet
 ipympl>=0.8.2
 ipywidgets>=8,<9
-jupyterlab~=3.4.7
+jupyterlab~=3.5.0
 jupyterlab-language-pack-fr-FR
 jupyterlab-language-pack-zh-CN
 jupyterlab-fasta>=3,<4
