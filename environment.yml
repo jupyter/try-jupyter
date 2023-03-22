@@ -20,6 +20,7 @@ dependencies:
 - jupyterlab-night
 - plotly>=5,<6
 - pip:
-  - jupyterlite-sphinx
-  - jupyterlite==0.1.0b19
+  - jupyterlite-sphinx>=0.8.0,<0.9
+  - jupyterlite-core==0.1.0b20
+  - jupyterlite-pyodide-kernel==0.0.5
   - jupyterlite-xeus-sqlite==0.2.1
