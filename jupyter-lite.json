@@ -4,7 +4,6 @@
     "appName": "Try Jupyter!",
     "disabledExtensions": [
       "@jupyterlab/server-proxy",
-      "@jupyterlite/javascript-kernel-extension",
       "jupyterlab-server-proxy",
       "nbdime-jupyterlab"
     ]
