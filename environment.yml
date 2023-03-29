@@ -21,6 +21,6 @@ dependencies:
 - plotly>=5,<6
 - pip:
   - jupyterlite-sphinx>=0.8.0,<0.9
-  - jupyterlite-core==0.1.0b20
+  - jupyterlite-core==0.1.0b22
   - jupyterlite-pyodide-kernel==0.0.5
   - jupyterlite-xeus-sqlite==0.2.1
