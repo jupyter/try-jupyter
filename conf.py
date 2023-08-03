@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+
+import shutil
+
 extensions = [
     'myst_parser',
     'jupyterlite_sphinx'
@@ -7,7 +10,7 @@ extensions = [
 jupyterlite_dir = "."
 jupyterlite_contents = "content"
 
-master_doc = 'README'
+master_doc = 'index'
 source_suffix = '.md'
 
 # General information about the project.
@@ -24,3 +27,5 @@ html_static_path = ['_static']
 html_css_files = [
     'custom.css'
 ]
+
+shutil.copy('README.md', 'index.md')
