@@ -18,10 +18,10 @@ dependencies:
 - jupyterlab-geojson>=3,<4
 - jupyterlab-tour
 - jupyterlab-night
+- jupyterlite-core==0.1.1
+- jupyterlite-pyodide-kernel==0.0.10
+- jupyterlite-sphinx>=0.9.1,<0.10
 - plotly>=5,<6
 - pip:
-  - jupyterlite-sphinx>=0.8.0,<0.9
-  - jupyterlite-core==0.1.1
-  - jupyterlite-pyodide-kernel==0.0.10
   - jupyterlite-xeus-sqlite==0.2.1
   - jupyterlab-open-url-parameter
