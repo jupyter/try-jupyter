@@ -11,7 +11,7 @@ dependencies:
 - ipyleaflet
 - ipympl >=0.8.2
 - ipywidgets >=8.1.1,<9
-- jupyterlab >=4.0.9,<5
+- jupyterlab >=4.0.11,<5
 - jupyterlab-language-pack-fr-FR
 - jupyterlab-language-pack-zh-CN
 - jupyterlab-fasta >=3.3.0,<4
@@ -19,10 +19,10 @@ dependencies:
 # currently broken: https://github.com/jupyterlab-contrib/jupyterlab-tour/issues/82
 # - jupyterlab-tour
 - jupyterlab-night
-- jupyterlite-core =0.2.2
-- jupyterlite-pyodide-kernel =0.2.0
+- jupyterlite-core =0.2.3
+- jupyterlite-pyodide-kernel =0.2.1
 - jupyterlite-sphinx >=0.10.0,<0.11
-- notebook >=7.0.6
+- notebook >=7.0.7
 - pip
 - plotly >=5,<6
 - pip:
