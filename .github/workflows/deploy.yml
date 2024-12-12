@@ -20,8 +20,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Install Conda environment from environment.yml
-        uses: mamba-org/provision-with-micromamba@v12
+      - name: Install micromamba
+        uses: mamba-org/setup-micromamba@v1
+        with:
+          micromamba-version: '1.5.8-0'
+          environment-file: environment.yml
+          cache-environment: true
       - name: Build the JupyterLite site
         shell: bash -l {0}
         run: |
