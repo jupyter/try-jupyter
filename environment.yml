@@ -11,17 +11,17 @@ dependencies:
 - ipyleaflet
 - ipympl >=0.8.2
 - ipywidgets >=8.1.1,<9
-- jupyterlab >=4.2.5,<=4.3
+- jupyterlab >=4.3.4,<=4.4
 - jupyterlab-language-pack-fr-FR
 - jupyterlab-language-pack-zh-CN
 - jupyterlab-fasta >=3.3.0,<4
 - jupyterlab-geojson >=3.4.0,<4
 - jupyterlab-tour
 - jupyterlab-night
-- jupyterlite-core =0.4.5
-- jupyterlite-pyodide-kernel =0.4.5
-- jupyterlite-sphinx >=0.16.3,<0.17
-- notebook >=7.2.2,<7.3
+- jupyterlite-core =0.5.0
+- jupyterlite-pyodide-kernel =0.5.0
+- jupyterlite-sphinx >=0.18.0,<0.19
+- notebook >=7.3.2,<7.4
 - pip
 - plotly >=5,<6
 - pip:
