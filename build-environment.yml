@@ -2,9 +2,10 @@ name: try-jupyter
 channels:
 - conda-forge
 dependencies:
-- python =3.11
+- python =3.12
 - mamba
 - pydata-sphinx-theme
+- sphinx <8.2
 - myst-parser
 - bqplot
 - ipycanvas >=0.9.1
