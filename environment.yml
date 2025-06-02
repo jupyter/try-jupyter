@@ -2,7 +2,7 @@ name: try-jupyter
 channels:
 - conda-forge
 dependencies:
-- python =3.11
+- python =3.12
 - mamba
 - pydata-sphinx-theme
 - myst-parser
@@ -10,20 +10,20 @@ dependencies:
 - ipycanvas >=0.9.1
 - ipyleaflet
 - ipympl >=0.8.2
-- ipywidgets >=8.1.1,<9
-- jupyterlab >=4.3.4,<=4.4
+- ipywidgets >=8.1.7,<9
+- jupyterlab >=4.4.4,<=4.5
 - jupyterlab-language-pack-fr-FR
 - jupyterlab-language-pack-zh-CN
 - jupyterlab-fasta >=3.3.0,<4
 - jupyterlab-geojson >=3.4.0,<4
 - jupyterlab-tour
 - jupyterlab-night
-- jupyterlite-core =0.5.1
-- jupyterlite-pyodide-kernel =0.5.2
-- jupyterlite-sphinx >=0.18.0,<0.19
-- notebook >=7.3.2,<7.4
+- jupyterlite-core =0.6.0
+- jupyterlite-pyodide-kernel =0.6.0
+- jupyterlite-sphinx >=0.20.0,<0.21
+- notebook >=7.4.3,<7.4
 - pip
-- plotly >=5,<6
+- plotly >=6,<7
 - pip:
   - jupyterlite-xeus-sqlite==0.2.1
   - jupyterlab-open-url-parameter >=0.3.0
