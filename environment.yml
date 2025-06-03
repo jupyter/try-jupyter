@@ -4,5 +4,5 @@ channels:
   - https://repo.prefix.dev/conda-forge
 dependencies:
   - xeus-r >= 0.4.0
-  - r-coursekata
   - r-colorspace
+  - r-ggplot2
