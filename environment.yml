@@ -3,6 +3,19 @@ channels:
   - https://repo.prefix.dev/emscripten-forge-dev
   - https://repo.prefix.dev/conda-forge
 dependencies:
-  - xeus-r >= 0.4.0
-  - r-colorspace
+  - xeus-r >= 0.6.0
+  - r-rlang
+  - r-evaluate
+  - r-glue
+  - r-r6
+  - r-jsonlite
+  - r-glue
+  - r-cli >=3.6.3
+  - r-repr
+  - r-IRdisplay
+  - r-dplyr
+  # Test dependencies
+  - r-htmltools
   - r-ggplot2
+  - r-munsell >=0.5.1
+  - r-colorspace
