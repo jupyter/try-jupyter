@@ -14,7 +14,6 @@ dependencies:
   - r-repr
   - r-IRdisplay
   - r-dplyr
-  # Test dependencies
   - r-htmltools
   - r-ggplot2
   - r-munsell >=0.5.1
