@@ -3,7 +3,7 @@ channels:
   - https://repo.prefix.dev/emscripten-forge-dev
   - https://repo.prefix.dev/conda-forge
 dependencies:
-  - xeus-r >= 0.6.0
+  - xeus-r >= 0.7.0
   - r-rlang
   - r-evaluate
   - r-glue
