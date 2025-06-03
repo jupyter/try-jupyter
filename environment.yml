@@ -4,17 +4,4 @@ channels:
   - https://repo.prefix.dev/conda-forge
 dependencies:
   - xeus-r >= 0.7.0
-  - r-rlang
-  - r-evaluate
-  - r-glue
-  - r-r6
-  - r-jsonlite
-  - r-glue
-  - r-cli >=3.6.3
-  - r-repr
-  - r-IRdisplay
-  - r-dplyr
-  - r-htmltools
   - r-ggplot2
-  - r-munsell >=0.5.1
-  - r-colorspace
