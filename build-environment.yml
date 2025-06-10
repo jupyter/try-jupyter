@@ -5,6 +5,7 @@ dependencies:
 - python =3.12
 - mamba
 - micromamba =2.0.5
+- nodejs =22
 - pydata-sphinx-theme
 - myst-parser
 - bqplot
