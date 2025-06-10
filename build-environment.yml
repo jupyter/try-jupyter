@@ -4,8 +4,6 @@ channels:
 dependencies:
 - python =3.12
 - mamba
-- micromamba =2.0.5
-- nodejs =22
 - pydata-sphinx-theme
 - myst-parser
 - bqplot
@@ -28,6 +26,9 @@ dependencies:
 - notebook >=7.4.3,<7.5
 - pip
 - plotly >=6,<7
+# micromamba and nodejs are needed for jupyterlite-terminal
+- micromamba =2.0.5
+- nodejs =22
 - pip:
   - jupyterlite-xeus-sqlite==0.2.1
   - jupyterlab-open-url-parameter >=0.3.0
