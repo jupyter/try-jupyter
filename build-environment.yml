@@ -4,6 +4,7 @@ channels:
 dependencies:
 - python =3.12
 - mamba
+- micromamba =2.0.5
 - pydata-sphinx-theme
 - myst-parser
 - bqplot
