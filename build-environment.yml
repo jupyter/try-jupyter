@@ -27,7 +27,7 @@ dependencies:
 - pip
 - plotly >=6,<7
 # micromamba and nodejs are needed for jupyterlite-terminal
-- micromamba =2.0.5
+- micromamba >=2.0.5,<3
 - nodejs =22
 - pip:
   - jupyterlite-xeus-sqlite==0.2.1
