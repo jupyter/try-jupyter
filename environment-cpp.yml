@@ -8,6 +8,3 @@ dependencies:
   - xtensor-blas
   - xsimd
   - xwidgets
-  - xcanvas
-  - pip:
-      - ipycanvas==0.11
