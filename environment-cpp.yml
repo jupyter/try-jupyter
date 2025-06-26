@@ -7,4 +7,3 @@ dependencies:
   - symengine
   - xtensor-blas
   - xsimd
-  - xwidgets
