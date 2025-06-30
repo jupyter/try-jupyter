@@ -8,7 +8,7 @@ A tour of Jupyter and IPython, powered by JupyterLite.
 
 ➡️ **https://jupyter.org/try-jupyter**
 
-Clicking the link above should load a JupyterLab environment running in your browser. Open the Introductory notebook at `content/Intro.ipynb` to get started.
+Clicking the link above should load a JupyterLab environment running in your browser. Open the Introductory notebook at `notebooks/Intro.ipynb` to get started.
 
 ## About this repository
 
