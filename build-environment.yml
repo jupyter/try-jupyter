@@ -11,19 +11,19 @@ dependencies:
 - ipyleaflet
 - ipympl >=0.8.2
 - ipywidgets >=8.1.7,<9
-- jupyterlab >=4.4.4,<=4.5
+- jupyterlab >=4.4.5,<=4.5
 - jupyterlab-language-pack-fr-FR
 - jupyterlab-language-pack-zh-CN
 - jupyterlab-fasta >=3.3.0,<4
 - jupyterlab-geojson >=3.4.0,<4
 - jupyterlab-tour
 - jupyterlab-night
-- jupyterlite-core =0.6.3
-- jupyterlite-pyodide-kernel =0.6.0
+- jupyterlite-core =0.6.4
+- jupyterlite-pyodide-kernel =0.6.1
 - jupyterlite-sphinx >=0.20.2,<0.21
 - jupyterlite-terminal >=0.2.1,<0.3.0
 - jupyterlite-xeus>=4.0.0
-- notebook >=7.4.4,<7.5
+- notebook >=7.4.5,<7.5
 - pip
 - plotly >=6,<7
 # micromamba and nodejs are needed for jupyterlite-terminal
