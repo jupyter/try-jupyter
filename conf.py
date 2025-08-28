@@ -9,6 +9,7 @@ extensions = [
 
 jupyterlite_dir = "."
 jupyterlite_contents = "content"
+jupyterlite_silence = False
 
 master_doc = 'index'
 source_suffix = '.md'
