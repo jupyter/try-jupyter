@@ -22,7 +22,6 @@ dependencies:
 - jupyterlite-pyodide-kernel =0.6.0
 - jupyterlite-sphinx >=0.20.2,<0.21
 - jupyterlite-terminal >=0.2.1,<0.3.0
-- jupyterlite-xeus =4.1.1
 - notebook >=7.4.4,<7.5
 - pip
 - plotly >=6,<7
@@ -30,5 +29,6 @@ dependencies:
 - micromamba >=2.0.5,<3
 - nodejs =22
 - pip:
+  - jupyterlite-xeus >=4.2.1
   - jupyterlite-xeus-sqlite==0.2.1
   - jupyterlab-open-url-parameter >=0.3.0
