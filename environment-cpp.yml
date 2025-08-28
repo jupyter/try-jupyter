@@ -3,9 +3,7 @@ channels:
   - https://prefix.dev/emscripten-forge-dev
   - https://prefix.dev/conda-forge
 dependencies:
-  - xeus =5.2.3
-  - xeus-cpp =0.7.1
-  - cppinterop =1.7.0
+  - xeus-cpp
   - symengine
   - xtensor-blas
   - xsimd
