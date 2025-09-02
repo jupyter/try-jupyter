@@ -29,6 +29,6 @@ dependencies:
 - micromamba >=2.0.5,<3
 - nodejs =22
 - pip:
-  - jupyterlite-xeus >=4.2.1
+  - jupyterlite-xeus >=4.2.2
   - jupyterlite-xeus-sqlite==0.2.1
   - jupyterlab-open-url-parameter >=0.3.0
