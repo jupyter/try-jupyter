@@ -28,7 +28,7 @@ jobs:
         shell: bash -l {0}
         run: |
           cp README.md content
-          pixi run jupyter lite build --contents content --output-dir dist
+          pixi run build
 
       - name: Upload dist
         uses: actions/upload-pages-artifact@v3
