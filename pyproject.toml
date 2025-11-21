@@ -41,6 +41,7 @@ micromamba = ">=2.0.5"
 nodejs = ">=22"
 pytest-playwright = ">=0.7.1"
 pytest-html = ">=4.1.1"
+pytest-rerunfailures = ">=15.0,<16"
 
 [tool.pytest.ini_options]
 testpaths = ["ui-tests"]

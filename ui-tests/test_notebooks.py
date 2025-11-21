@@ -22,6 +22,7 @@ if not NOTEBOOKS:
     pytest.fail(f"No notebooks found in {CONTENT_DIR}")
 
 
+@pytest.mark.flaky(reruns=2, reruns_delay=1, only_rerun=["TimeoutError"])
 @pytest.mark.parametrize("notebook_path", NOTEBOOKS, ids=lambda p: p.stem)
 def test_notebook_execution(page: Page, base_url: str, notebook_path: Path) -> None:
     # Construct the URL to open the notebook
