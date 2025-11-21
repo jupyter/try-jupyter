@@ -1,6 +1,6 @@
 {
   "LiteBuildConfig": {
-    "outputDir": "dist",
+    "output_dir": "dist",
     "contents": [
       "content"
     ]

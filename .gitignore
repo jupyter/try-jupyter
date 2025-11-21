@@ -117,3 +117,9 @@ _output
 # pixi environments
 .pixi/*
 !.pixi/config.toml
+
+# JupyterLite terminal
+cockle-config.json
+.cockle_temp/
+cockle_wasm_env/
+
