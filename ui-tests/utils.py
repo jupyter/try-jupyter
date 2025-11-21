@@ -2,6 +2,27 @@
 
 from playwright.sync_api import Page
 
+# Known warnings per notebook that should be filtered out
+KNOWN_WARNINGS_BY_NOTEBOOK = {
+    "Lorenz.ipynb": [
+        "Matplotlib is building the font cache; this may take a moment.",
+    ],
+    "Intro.ipynb": [
+        "Matplotlib is building the font cache; this may take a moment.",
+    ],
+    "r.ipynb": [
+        "Attaching package:",
+    ],
+    "cpp.ipynb": [
+        "some error"
+    ],
+    "cpp-smallpt.ipynb": [],
+    "cpp-third-party-libs.ipynb": [],
+    "sqlite.ipynb": [
+        "Error: no such table: players",
+    ],
+}
+
 
 def wait_for_kernel_success(page: Page, timeout: int = 30000) -> None:
     page.wait_for_selector(".jp-KernelStatus-success", timeout=timeout, state="attached")
@@ -17,7 +38,7 @@ def wait_for_notebook_ready(page: Page, timeout: int = 30000) -> None:
     wait_for_kernel_success(page, timeout)
 
 
-def execute_all_cells(page: Page, timeout: int = 300000) -> None:
+def execute_all_cells(page: Page, notebook_name: str | None = None, timeout: int = 300000) -> None:
     page.click('text="Run"')
     page.click('text="Run All Cells"')
 
@@ -34,6 +55,18 @@ def execute_all_cells(page: Page, timeout: int = 300000) -> None:
             page.keyboard.press("Enter")
             # Wait briefly for the input to be processed
             page.wait_for_timeout(500)
+
+        # Check for errors that might have stopped execution
+        errors = check_for_errors(page, notebook_name=notebook_name)
+        if errors:
+            # Check if kernel is idle (execution stopped due to error)
+            try:
+                wait_for_kernel_success(page, timeout=500)
+                # If kernel is idle, execution has stopped
+                break
+            except:
+                # Kernel is still busy, continue waiting
+                pass
 
         # Check if all cells have finished executing by looking at the last code cell
         code_cells = page.locator(".jp-CodeCell")
@@ -63,14 +96,16 @@ def execute_all_cells(page: Page, timeout: int = 300000) -> None:
 
 
 def check_for_errors(
-    page: Page, known_warnings: list[str] | None = None
+    page: Page,
+    notebook_name: str | None = None,
+    known_warnings: list[str] | None = None,
 ) -> list[str]:
+    # Use provided known_warnings, or lookup by notebook_name, or default to empty list
     if known_warnings is None:
-        known_warnings = [
-            "Matplotlib is building the font cache; this may take a moment.",
-            "some error",
-            "Attaching package:",
-        ]
+        if notebook_name and notebook_name in KNOWN_WARNINGS_BY_NOTEBOOK:
+            known_warnings = KNOWN_WARNINGS_BY_NOTEBOOK[notebook_name]
+        else:
+            known_warnings = []
 
     errors = []
 

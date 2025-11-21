@@ -45,10 +45,10 @@ def test_notebook_execution(page: Page, base_url: str, notebook_path: Path) -> N
     wait_for_notebook_ready(page, timeout=60000)
 
     # Execute all cells in the notebook
-    execute_all_cells(page, timeout=180000)  # 3 minutes for execution
+    execute_all_cells(page, notebook_name=notebook_path.name, timeout=180000)  # 3 minutes for execution
 
     # Check for any errors
-    errors = check_for_errors(page)
+    errors = check_for_errors(page, notebook_name=notebook_path.name)
 
     # Take screenshot on failure for debugging
     if errors:

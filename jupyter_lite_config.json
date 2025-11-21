@@ -7,9 +7,10 @@
   },
   "XeusAddon": {
     "environment_file": [
+      "environment-cpp.yml",
       "environment-python.yml",
       "environment-r.yml",
-      "environment-cpp.yml"
+      "environment-sqlite.yml"
     ]
   }
 }
