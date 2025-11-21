@@ -123,3 +123,8 @@ cockle-config.json
 .cockle_temp/
 cockle_wasm_env/
 
+# UI tests
+ui-tests/*.png
+ui-tests/report.html
+ui-tests/.pytest_cache/
+ui-tests/videos/

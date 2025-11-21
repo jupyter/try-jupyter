@@ -45,3 +45,11 @@ pip = ">=25.3,<26"
 plotly = ">=6"
 micromamba = ">=2.0.5"
 nodejs = ">=22"
+pytest-playwright = ">=0.7.1"
+pytest-html = ">=4.1.1"
+
+[tool.pytest.ini_options]
+testpaths = ["ui-tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short --html=ui-tests/report.html --self-contained-html"
