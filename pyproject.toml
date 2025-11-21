@@ -1,0 +1,44 @@
+[project]
+authors = [{name = "Project Jupyter", email = "jupyter@googlegroups.com"}]
+name = "try-jupyter"
+requires-python = ">= 3.11"
+version = "0.1.0"
+dependencies = ["jupyterlab-open-url-parameter>=0.3.0"]
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["osx-arm64"]
+
+[tool.pixi.tasks]
+
+[tool.pixi.dependencies]
+python = ">=3.12"
+mamba = ">=2.4.0,<3"
+pydata-sphinx-theme = ">=0.16.1,<0.17"
+myst-parser = ">=4.0.1,<5"
+bqplot = ">=0.12.45,<0.13"
+ipycanvas = ">=0.9.1"
+ipyleaflet = ">=0.20.0,<0.21"
+ipympl = ">=0.8.2"
+ipywidgets = ">=8.1.7"
+jupyterlab = ">=4.4.4"
+jupyterlab-language-pack-fr-fr = ">=4.4.post3,<5"
+jupyterlab-language-pack-zh-cn = ">=4.4.post3,<5"
+jupyterlab-fasta = ">=3.3.0"
+jupyterlab-geojson = ">=3.4.0"
+jupyterlab-tour = ">=4.0.1,<5"
+jupyterlab-night = ">=0.5.2,<0.6"
+jupyterlite-core = ">=0.6.3"
+jupyterlite-pyodide-kernel = ">=0.6.0"
+jupyterlite-sphinx = ">=0.20.2"
+jupyterlite-terminal = ">=0.2.1"
+jupyterlite-xeus = ">=4.0.0"
+notebook = ">=7.4.4"
+pip = ">=25.3,<26"
+plotly = ">=6"
+micromamba = ">=2.0.5"
+nodejs = ">=22"
