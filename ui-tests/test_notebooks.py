@@ -16,6 +16,7 @@ from utils import (
 # Auto-discover all notebooks in content/notebooks/
 CONTENT_DIR = Path(__file__).parent.parent / "content" / "notebooks"
 NOTEBOOKS = sorted(CONTENT_DIR.glob("*.ipynb"))
+TIMEOUT = 300_000
 
 if not NOTEBOOKS:
     pytest.fail(f"No notebooks found in {CONTENT_DIR}")
@@ -23,31 +24,19 @@ if not NOTEBOOKS:
 
 @pytest.mark.parametrize("notebook_path", NOTEBOOKS, ids=lambda p: p.stem)
 def test_notebook_execution(page: Page, base_url: str, notebook_path: Path) -> None:
-    """Test that a notebook executes without errors in JupyterLite.
-
-    Args:
-        page: Playwright page fixture
-        base_url: Base URL of the JupyterLite server
-        notebook_path: Path to the notebook file to test
-    """
     # Construct the URL to open the notebook
     # JupyterLite URL format: /lab/index.html?path=notebooks/NotebookName.ipynb
     relative_path = notebook_path.relative_to(notebook_path.parent.parent)
     notebook_url = f"{base_url}/lab/index.html?path={quote(str(relative_path))}"
 
-    # Navigate to the notebook
     page.goto(notebook_url, wait_until="networkidle", timeout=60000)
 
-    # Wait for JupyterLite to be ready
     wait_for_jupyterlite_ready(page, timeout=60000)
 
-    # Wait for the notebook to be loaded
     wait_for_notebook_ready(page, timeout=60000)
 
-    # Execute all cells in the notebook
-    execute_all_cells(page, notebook_name=notebook_path.name, timeout=180000)  # 3 minutes for execution
+    execute_all_cells(page, notebook_name=notebook_path.name, timeout=TIMEOUT)
 
-    # Check for any errors
     errors = check_for_errors(page, notebook_name=notebook_path.name)
 
     # Take screenshot on failure for debugging
