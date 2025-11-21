@@ -44,7 +44,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test-screenshots
-          path: ui-tests/screenshot_*.png
+          path: |
+            ui-tests/screenshot_*.png
+            ui-tests/videos
           if-no-files-found: ignore
 
       - name: Upload test results
