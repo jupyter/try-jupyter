@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build, Test, and Deploy
 
 on:
   push:
@@ -30,13 +30,71 @@ jobs:
           cp README.md content
           pixi run build
 
-      - name: Upload dist
+      - name: Upload dist artifact for testing
+        uses: actions/upload-artifact@v4
+        with:
+          name: jupyterlite-dist
+          path: ./dist
+
+      - name: Upload dist for GitHub Pages
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./dist
 
-  deploy:
+  test:
     needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pixi
+        uses: prefix-dev/setup-pixi@v0.9.3
+        with:
+          pixi-version: v0.59.0
+          cache: true
+
+      - name: Download built site
+        uses: actions/download-artifact@v4
+        with:
+          name: jupyterlite-dist
+          path: ./dist
+
+      - name: Install Playwright browsers
+        shell: bash -l {0}
+        run: |
+          pixi run playwright install --with-deps chromium
+
+      - name: Run notebook tests
+        shell: bash -l {0}
+        run: |
+          pixi run pytest ui-tests/ -v
+
+      - name: Upload screenshots on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-screenshots
+          path: |
+            ui-tests/screenshot_*.png
+            ui-tests/videos
+          if-no-files-found: ignore
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pytest-results
+          path: |
+            ui-tests/report.html
+            ui-tests/.pytest_cache
+            ui-tests/test-results
+          if-no-files-found: ignore
+
+  deploy:
+    needs: test
     if: github.ref == 'refs/heads/main'
     permissions:
       pages: write
