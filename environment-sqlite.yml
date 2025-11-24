@@ -1,7 +1,6 @@
-name: xeus-r-kernel
+name: xeus-sqlite-kernel
 channels:
   - https://prefix.dev/emscripten-forge-dev
   - https://prefix.dev/conda-forge
 dependencies:
-  - xeus-r >= 0.7.0
-  - r-ggplot2
+  - xeus-sqlite
