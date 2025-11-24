@@ -4,7 +4,7 @@ name = "try-jupyter"
 dependencies = ["jupyterlab-open-url-parameter>=0.3.0"]
 
 [tool.pixi.workspace]
-channels = ["conda-forge/label/jupyterlite_core_rc", "conda-forge/label/jupyterlite_pydodide_kernel_rc", "conda-forge"]
+channels = ["conda-forge/label/jupyterlite_core_rc", "conda-forge/label/jupyterlite_pyodide_kernel_rc", "conda-forge"]
 platforms = ["linux-64", "osx-64", "win-64", "osx-arm64"]
 
 [tool.pixi.tasks]
