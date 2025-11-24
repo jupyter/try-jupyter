@@ -4,7 +4,7 @@ name = "try-jupyter"
 dependencies = ["jupyterlab-open-url-parameter>=0.3.0"]
 
 [tool.pixi.workspace]
-channels = ["conda-forge"]
+channels = ["conda-forge/label/jupyterlite_core_rc", "conda-forge/label/jupyterlite_pydodide_kernel_rc", "conda-forge"]
 platforms = ["linux-64", "osx-64", "win-64", "osx-arm64"]
 
 [tool.pixi.tasks]
@@ -24,19 +24,18 @@ ipycanvas = ">=0.9.1"
 ipyleaflet = ">=0.20.0,<0.21"
 ipympl = ">=0.8.2"
 ipywidgets = ">=8.1.7"
-jupyterlab = ">=4.4.4"
+jupyterlab = ">=4.5.0,<5"
 jupyterlab-language-pack-fr-fr = ">=4.4.post3,<5"
 jupyterlab-language-pack-zh-cn = ">=4.4.post3,<5"
 jupyterlab-fasta = ">=3.3.0"
 jupyterlab-geojson = ">=3.4.0"
 jupyterlab-tour = ">=4.0.1,<5"
 jupyterlab-night = ">=0.5.2,<0.6"
-jupyterlite-core = ">=0.6.3"
-jupyterlite-pyodide-kernel = ">=0.6.0"
-jupyterlite-sphinx = ">=0.20.2"
-jupyterlite-terminal = ">=0.2.1"
-jupyterlite-xeus = ">=4.2.2"
-notebook = ">=7.4.4"
+jupyterlite-core = ">=0.7.0rc1,<0.8"
+jupyterlite-pyodide-kernel = ">=0.7.0rc0,<0.8"
+jupyterlite-terminal = ">=1.1.0,<2"
+jupyterlite-xeus = ">=4.2.2,<5"
+notebook = ">=7.5.0,<8"
 pip = ">=25.3,<26"
 plotly = ">=6"
 micromamba = ">=2.0.5"
