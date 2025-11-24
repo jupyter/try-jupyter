@@ -38,23 +38,19 @@ def server_port() -> int:
 @pytest.fixture(scope="session", autouse=True)
 def http_server(dist_dir: Path, server_port: int):
     """Start HTTP server serving the built JupyterLite site."""
-    # Start Python's built-in HTTP server as a subprocess
     process = subprocess.Popen(
         ["python", "-m", "http.server", str(server_port), "--directory", str(dist_dir)],
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
     )
 
-    # Wait for server to be ready
     time.sleep(1)
 
-    # Check if process started successfully
     if process.poll() is not None:
         pytest.fail(f"Failed to start HTTP server on port {server_port}")
 
     yield process
 
-    # Cleanup
     process.terminate()
     try:
         process.wait(timeout=5)

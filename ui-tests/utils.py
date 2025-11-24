@@ -59,13 +59,10 @@ def execute_all_cells(page: Page, notebook_name: str | None = None, timeout: int
         # Check for errors that might have stopped execution
         errors = check_for_errors(page, notebook_name=notebook_name)
         if errors:
-            # Check if kernel is idle (execution stopped due to error)
             try:
                 wait_for_kernel_success(page, timeout=500)
-                # If kernel is idle, execution has stopped
                 break
             except:
-                # Kernel is still busy, continue waiting
                 pass
 
         # Check if all cells have finished executing by looking at the last code cell
@@ -86,7 +83,6 @@ def execute_all_cells(page: Page, notebook_name: str | None = None, timeout: int
                     # continue waiting
                     pass
 
-        # Check timeout
         elapsed = page.evaluate("Date.now()") - start_time
         if elapsed > timeout:
             raise TimeoutError(f"Notebook execution timed out after {timeout}ms")
