@@ -70,7 +70,7 @@ jobs:
       - name: Run notebook tests
         shell: bash -l {0}
         run: |
-          pixi run pytest ui-tests/ -v
+          pixi run test
 
       - name: Upload screenshots on failure
         if: failure()
@@ -89,7 +89,6 @@ jobs:
           name: pytest-results
           path: |
             ui-tests/report.html
-            ui-tests/.pytest_cache
             ui-tests/test-results
           if-no-files-found: ignore
 
