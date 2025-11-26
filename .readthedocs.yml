@@ -8,4 +8,5 @@ build:
     - mamba install -c conda-forge -c nodefaults pixi
     - pixi install
     - pixi run build
+    - pixi run filter-kernels
     - pixi run readthedocs
