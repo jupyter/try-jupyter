@@ -97,7 +97,6 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-language-pack-fr-fr-4.4.post3-pyhb354a33_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-language-pack-zh-cn-4.4.post3-pyh3752e69_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-night-0.5.2-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-tour-4.0.1-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab_pygments-0.3.0-pyhd8ed1ab_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab_server-2.28.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab_widgets-3.0.16-pyhcf101f3_1.conda
@@ -376,7 +375,6 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-language-pack-fr-fr-4.4.post3-pyhb354a33_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-language-pack-zh-cn-4.4.post3-pyh3752e69_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-night-0.5.2-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-tour-4.0.1-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab_pygments-0.3.0-pyhd8ed1ab_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab_server-2.28.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab_widgets-3.0.16-pyhcf101f3_1.conda
@@ -652,7 +650,6 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-language-pack-fr-fr-4.4.post3-pyhb354a33_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-language-pack-zh-cn-4.4.post3-pyh3752e69_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-night-0.5.2-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-tour-4.0.1-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab_pygments-0.3.0-pyhd8ed1ab_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab_server-2.28.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab_widgets-3.0.16-pyhcf101f3_1.conda
@@ -926,7 +923,6 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-language-pack-fr-fr-4.4.post3-pyhb354a33_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-language-pack-zh-cn-4.4.post3-pyh3752e69_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-night-0.5.2-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-tour-4.0.1-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab_pygments-0.3.0-pyhd8ed1ab_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab_server-2.28.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab_widgets-3.0.16-pyhcf101f3_1.conda
@@ -3045,17 +3041,6 @@ packages:
   version: 0.3.0
   sha256: 5c294da40f269e03e0fb4b6febad511e241f1619a1d294af3922129c64398344
   requires_python: '>=3.8'
-- conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-tour-4.0.1-pyhd8ed1ab_1.conda
-  sha256: f88480fac881e6bd2eaa7d16ee5744d186d9c3f0403d891cbb7907a84a5e6b4f
-  md5: ef0a1b7805c292a3d7dce4ffd98f9239
-  depends:
-  - python >=3.9,<4.0
-  license: BSD-3-Clause
-  license_family: BSD
-  purls:
-  - pkg:pypi/jupyterlab-tour?source=hash-mapping
-  size: 95678
-  timestamp: 1736621653724
 - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab_pygments-0.3.0-pyhd8ed1ab_2.conda
   sha256: dc24b900742fdaf1e077d9a3458fd865711de80bca95fe3c6d46610c532c6ef0
   md5: fd312693df06da3578383232528c468d
