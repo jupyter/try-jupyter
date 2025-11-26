@@ -11,7 +11,7 @@ import json
 from pathlib import Path
 
 # Kernels to keep
-KERNELS_TO_KEEP = {"xcpp23", "xr", "xpython", "xsqlite"}
+KERNELS_TO_KEEP = {"xcpp23", "xc23", "xr", "xpython", "xsqlite"}
 
 
 def filter_kernels(dist_dir: Path) -> None:
