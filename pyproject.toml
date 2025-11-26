@@ -4,7 +4,7 @@ name = "try-jupyter"
 dependencies = ["jupyterlab-open-url-parameter>=0.3.0"]
 
 [tool.pixi.workspace]
-channels = ["conda-forge/label/jupyterlite_core_rc", "conda-forge/label/jupyterlite_pyodide_kernel_rc", "conda-forge"]
+channels = ["conda-forge"]
 platforms = ["linux-64", "osx-64", "win-64", "osx-arm64"]
 
 [tool.pixi.tasks]
@@ -31,10 +31,10 @@ jupyterlab-fasta = ">=3.3.0"
 jupyterlab-geojson = ">=3.4.0"
 jupyterlab-tour = ">=4.0.1,<5"
 jupyterlab-night = ">=0.5.2,<0.6"
-jupyterlite-core = ">=0.7.0rc1,<0.8"
-jupyterlite-pyodide-kernel = ">=0.7.0rc0,<0.8"
+jupyterlite-core = ">=0.7.0,<0.8"
+jupyterlite-pyodide-kernel = ">=0.7.0,<0.8"
 jupyterlite-terminal = ">=1.1.0,<2"
-jupyterlite-xeus = ">=4.2.2,<5"
+jupyterlite-xeus = ">=4.3.0,<5"
 notebook = ">=7.5.0,<8"
 pip = ">=25.3,<26"
 plotly = ">=6"
