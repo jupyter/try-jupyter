@@ -30,6 +30,11 @@ jobs:
           cp README.md content
           pixi run build
 
+      - name: Filter xeus kernels to only keep C++23
+        shell: bash -l {0}
+        run: |
+          pixi run filter-kernels
+
       - name: Upload dist artifact for testing
         uses: actions/upload-artifact@v4
         with:
