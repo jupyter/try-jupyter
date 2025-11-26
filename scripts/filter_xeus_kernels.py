@@ -3,7 +3,7 @@
 Post-build script to filter xeus kernels.
 
 This script modifies the built JupyterLite site to only include
-the C++23 kernel from the xeus kernels list.
+the selected kernels (C++23, R, Python, SQLite) from the xeus kernels list.
 """
 
 import argparse
@@ -40,7 +40,7 @@ def filter_kernels(dist_dir: Path) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Filter xeus kernels to only keep selected kernels (C++23, R, Python, SQLite, DuckDB)."
+        description="Filter xeus kernels to only keep selected kernels (C++23, R, Python, SQLite)."
     )
     parser.add_argument(
         "dist_dir",
