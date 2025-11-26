@@ -10,12 +10,12 @@ import argparse
 import json
 from pathlib import Path
 
-# Kernels to keep (only C++23)
-KERNELS_TO_KEEP = {"xcpp23"}
+# Kernels to keep
+KERNELS_TO_KEEP = {"xcpp23", "xr", "xpython", "xsqlite"}
 
 
 def filter_kernels(dist_dir: Path) -> None:
-    """Filter the xeus kernels to only keep C++23."""
+    """Filter the xeus kernels to only keep the selected kernels."""
     xeus_dir = dist_dir / "xeus"
     kernels_file = xeus_dir / "kernels.json"
 
@@ -40,7 +40,7 @@ def filter_kernels(dist_dir: Path) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Filter xeus kernels to only keep C++23."
+        description="Filter xeus kernels to only keep selected kernels (C++23, R, Python, SQLite, DuckDB)."
     )
     parser.add_argument(
         "dist_dir",
