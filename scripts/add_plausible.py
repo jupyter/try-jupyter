@@ -11,7 +11,7 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-PLAUSIBLE_SRC = "https://plausible.io/js/pa-eNfnVmf5sGWJaB1mfLZJF.js"
+PLAUSIBLE_SRC = "https://plausible.io/js/pa-B75UO5--FNXYQSG7GBWkf.js"
 PLAUSIBLE_INIT = (
     "window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},"
     "plausible.init=plausible.init||function(i){plausible.o=i||{}};"
