@@ -34,7 +34,7 @@ def inject_plausible(dist_dir: Path) -> None:
 
         # Add the external Plausible script
         external_script = soup.new_tag("script")
-        external_script["async"] = True
+        external_script["async"] = ""
         external_script["src"] = PLAUSIBLE_SRC
         head.append(external_script)
 
