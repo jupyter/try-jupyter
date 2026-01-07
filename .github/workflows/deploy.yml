@@ -35,6 +35,11 @@ jobs:
         run: |
           pixi run filter-kernels
 
+      - name: Add Plausible analytics
+        shell: bash -l {0}
+        run: |
+          pixi run add-plausible
+
       - name: Upload dist artifact for testing
         uses: actions/upload-artifact@v4
         with:
