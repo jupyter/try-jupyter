@@ -15,7 +15,7 @@ PLAUSIBLE_SRC = "https://plausible.io/js/pa-B75UO5--FNXYQSG7GBWkf.js"
 PLAUSIBLE_INIT = (
     "window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},"
     "plausible.init=plausible.init||function(i){plausible.o=i||{}};"
-    "plausible.init({hashBasedRouting:true})"
+    "plausible.init()"
 )
 
 
