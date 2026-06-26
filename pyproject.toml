@@ -12,7 +12,7 @@ clean = "rm -rf .jupyterlite.doit.db dist"
 build = "jupyter lite build"
 filter-kernels = "python scripts/filter_xeus_kernels.py dist"
 add-plausible = "python scripts/add_plausible.py dist"
-test = "pytest ui-tests/ -v"
+test = "pytest"
 readthedocs = "rm -rf $READTHEDOCS_OUTPUT/html && cp -r dist $READTHEDOCS_OUTPUT/html"
 
 [tool.pixi.dependencies]
@@ -41,9 +41,10 @@ pip = ">=25.3,<26"
 plotly = ">=6"
 micromamba = ">=2.0.5"
 nodejs = ">=22"
-pytest-playwright = ">=0.7.1"
-pytest-html = ">=4.1.1"
-pytest-rerunfailures = ">=15.0,<16"
+playwright = ">=1.61.0"
+pytest-playwright = ">=0.8.0"
+pytest-html = ">=4.2.0"
+pytest-rerunfailures = ">=15.1,<16"
 
 [tool.pytest.ini_options]
 testpaths = ["ui-tests"]
