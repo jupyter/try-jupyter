@@ -1,0 +1,6 @@
+name: xeus-lfortran-kernel
+channels:
+  - https://prefix.dev/emscripten-forge-4x
+  - https://prefix.dev/conda-forge
+dependencies:
+  - xeus-lfortran>=0.65.0
