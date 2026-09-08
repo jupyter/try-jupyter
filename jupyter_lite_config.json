@@ -10,7 +10,8 @@
       "environment-cpp.yml",
       "environment-python.yml",
       "environment-r.yml",
-      "environment-sqlite.yml"
+      "environment-sqlite.yml",
+      "environment-fortran.yml"
     ]
   }
 }
