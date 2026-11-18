@@ -1,5 +1,6 @@
 """Pytest configuration and fixtures for JupyterLite UI tests."""
 
+import os
 import socket
 import subprocess
 import time
@@ -20,7 +21,7 @@ def find_free_port() -> int:
 @pytest.fixture(scope="session")
 def dist_dir() -> Path:
     """Return path to the built JupyterLite distribution."""
-    dist_path = Path(__file__).parent.parent / "dist"
+    dist_path = Path(os.environ.get("TRY_JUPYTER_DIST", Path(__file__).parent.parent / "dist"))
     if not dist_path.exists():
         pytest.fail(
             f"Distribution directory not found: {dist_path}\n"
