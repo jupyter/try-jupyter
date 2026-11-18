@@ -1,0 +1,20 @@
+{
+  "title": "Report a Problem",
+  "description": "Help menu entry that opens the Report a Problem dialog.",
+  "jupyter.lab.menus": {
+    "main": [
+      {
+        "id": "jp-mainmenu-help",
+        "items": [
+          {
+            "command": "try-jupyter:report-problem",
+            "rank": 2
+          }
+        ]
+      }
+    ]
+  },
+  "properties": {},
+  "additionalProperties": false,
+  "type": "object"
+}

@@ -3,6 +3,9 @@
     "output_dir": "dist",
     "contents": [
       "content"
+    ],
+    "federated_extensions": [
+      "feedback"
     ]
   },
   "XeusAddon": {
