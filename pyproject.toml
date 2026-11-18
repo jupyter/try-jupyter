@@ -8,7 +8,7 @@ channels = ["conda-forge"]
 platforms = ["linux-64", "osx-64", "win-64", "osx-arm64"]
 
 [tool.pixi.tasks]
-clean = "rm -rf .jupyterlite.doit.db dist"
+clean = "rm -rf .jupyterlite.doit.db .beta dist"
 build = "jupyter lite build"
 filter-kernels = "python scripts/filter_xeus_kernels.py dist"
 add-plausible = "python scripts/add_plausible.py dist"
@@ -46,6 +46,51 @@ playwright = ">=1.61.0"
 pytest-playwright = ">=0.8.0"
 pytest-html = ">=4.2.0"
 pytest-rerunfailures = ">=15.1,<16"
+
+[tool.pixi.feature.beta]
+# Pre-releases are published under conda-forge labels: replace _beta with _alpha or _rc to follow other pre-releases.
+channels = [
+  "conda-forge/label/jupyterlite_core_beta",
+  "conda-forge/label/jupyterlite_pyodide_kernel_beta",
+  "conda-forge/label/jupyterlab_beta",
+  "conda-forge/label/notebook_beta",
+  "conda-forge",
+]
+
+[tool.pixi.feature.beta.tasks]
+# jupyter lite build stores its doit cache in the working directory, so the beta build runs in .beta.
+build-beta = "mkdir -p .beta && cd .beta && jupyter lite build --lite-dir .. --output-dir ../dist/beta && python ../scripts/filter_xeus_kernels.py ../dist/beta && python ../scripts/mark_beta.py ../dist/beta"
+
+[tool.pixi.feature.beta.dependencies]
+python = ">=3.12"
+mamba = ">=2.4.0,<3"
+bqplot = ">=0.13.1,<0.14"
+ipycanvas = ">=0.9.1"
+ipyleaflet = ">=0.20.0,<0.21"
+ipympl = ">=0.8.2"
+ipywidgets = ">=8.1.7"
+jupyter-ai-lite = ">=0.21.0,<0.22"
+jupyterlab = ">=4.7.0b1,<4.8"
+jupyterlab-language-pack-fr-fr = ">=4.4.post3,<5"
+jupyterlab-language-pack-zh-cn = ">=4.4.post3,<5"
+jupyterlab-fasta = ">=3.3.0"
+jupyterlab-geojson = ">=3.4.0"
+jupyterlab-night = ">=0.5.2,<0.6"
+jupyterlite-core = ">=0.9.0b1,<0.10"
+jupyterlite-pyodide-kernel = ">=0.9.0b0,<0.10"
+jupyterlite-terminal = ">=1.7.1,<2"
+jupyterlite-xeus = ">=6.0.0,<7"
+notebook = ">=7.7.0b1,<7.8"
+pip = ">=25.3,<26"
+plotly = ">=6"
+micromamba = ">=2.0.5"
+nodejs = ">=22"
+
+[tool.pixi.feature.beta.pypi-dependencies]
+jupyterlab-open-url-parameter = ">=0.3.0"
+
+[tool.pixi.environments]
+beta = { features = ["beta"], no-default-feature = true }
 
 [tool.pytest.ini_options]
 testpaths = ["ui-tests"]
