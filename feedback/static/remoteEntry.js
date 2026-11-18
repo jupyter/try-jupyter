@@ -16,38 +16,6 @@
     'fortran'
   ]);
 
-  const STYLE = `
-.jp-TryJupyterFeedback.jp-Dialog {
-  max-width: none;
-  max-height: none;
-  border: none;
-}
-.jp-TryJupyterFeedback::backdrop {
-  background: none;
-}
-.jp-TryJupyterFeedback .jp-Dialog-body {
-  max-width: 480px;
-}
-.jp-TryJupyterFeedback fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-.jp-TryJupyterFeedback legend {
-  padding: 0;
-  margin-bottom: 8px;
-}
-.jp-TryJupyterFeedback label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 6px 0;
-}
-.jp-TryJupyterFeedback-note {
-  color: var(--jp-ui-font-color2);
-}
-`;
-
   function pageConfig() {
     const node = document.getElementById('jupyter-config-data');
     return node ? JSON.parse(node.textContent) : {};
@@ -130,7 +98,7 @@
     return `https://github.com/${choice.repository}/issues/new?${query}`;
   }
 
-  function element(tag, className, text) {
+  function element(tag, className, text, css) {
     const node = document.createElement(tag);
     if (className) {
       node.className = className;
@@ -138,32 +106,49 @@
     if (text) {
       node.textContent = text;
     }
+    if (css) {
+      node.style.cssText = css;
+    }
     return node;
   }
 
   // A modal dialog with the markup and classes of JupyterLab dialogs.
   // Resolves to the index of the chosen answer, or null when cancelled.
   function ask(options) {
-    if (!document.getElementById('jp-TryJupyterFeedback-style')) {
-      const style = element('style');
-      style.id = 'jp-TryJupyterFeedback-style';
-      style.textContent = STYLE;
-      document.head.appendChild(style);
-    }
+    // A modal dialog gets the size limits and the border of the browser's dialog style.
     const dialog = element(
       'dialog',
-      'jp-Dialog jp-ThemedContainer jp-TryJupyterFeedback'
+      'jp-Dialog jp-ThemedContainer',
+      '',
+      'max-width: none; max-height: none; border: none'
     );
     dialog.setAttribute('aria-labelledby', 'jp-TryJupyterFeedback-title');
     const form = element('form', 'jp-Dialog-content');
     form.method = 'dialog';
     const header = element('div', 'jp-Dialog-header', 'Report a Problem');
     header.id = 'jp-TryJupyterFeedback-title';
-    const body = element('div', 'jp-Dialog-body');
-    const fieldset = element('fieldset');
-    fieldset.appendChild(element('legend', '', 'What is the problem about?'));
+    const body = element('div', 'jp-Dialog-body', '', 'max-width: 480px');
+    const fieldset = element(
+      'fieldset',
+      '',
+      '',
+      'border: none; margin: 0; padding: 0'
+    );
+    fieldset.appendChild(
+      element(
+        'legend',
+        '',
+        'What is the problem about?',
+        'padding: 0; margin-bottom: 8px'
+      )
+    );
     options.forEach((option, index) => {
-      const label = element('label');
+      const label = element(
+        'label',
+        '',
+        '',
+        'display: flex; align-items: center; gap: 8px; margin: 6px 0'
+      );
       const input = element('input');
       input.type = 'radio';
       input.name = 'try-jupyter-feedback';
@@ -177,8 +162,9 @@
       fieldset,
       element(
         'p',
-        'jp-TryJupyterFeedback-note',
-        'This opens a new GitHub issue with the details of this page filled in, and copies the details to the clipboard. You need a GitHub account to submit the issue.'
+        '',
+        'This opens a new GitHub issue with the details of this page filled in, and copies the details to the clipboard. You need a GitHub account to submit the issue.',
+        'color: var(--jp-ui-font-color2)'
       )
     );
     const buttons = element('div', 'jp-Dialog-footerButtons');
