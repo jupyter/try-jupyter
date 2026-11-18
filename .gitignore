@@ -115,7 +115,6 @@ dmypy.json
 *.doit.db
 _output
 .beta/
-dist-beta/
 # pixi environments
 .pixi/*
 !.pixi/config.toml

@@ -24,7 +24,7 @@ Make the edits you wish at that URL, then download the notebook and replace the 
 
 ### Beta site
 
-The `beta` environment builds the same notebooks with the pre-releases of JupyterLite, JupyterLab and Jupyter Notebook.
-`pixi run build-beta` builds it into `dist-beta`, and a Read the Docs project with the environment variable `TRY_JUPYTER_SITE=beta` publishes it.
+The beta site at https://jupyter.org/try-jupyter/beta/ serves the same notebooks with the pre-releases of JupyterLite, JupyterLab and Jupyter Notebook.
+`pixi run build-beta` builds it into `dist/beta` after `pixi run build`, and it loads the xeus kernel packages of the stable site to stay within the 1 GB limit of GitHub Pages.
 To follow a newer pre-release of a package, set its label channel (`_alpha`, `_beta` or `_rc`) and its lower bound in `pyproject.toml`, then run `pixi update -e beta`.
 Remove the label channel of a package once its final release is on conda-forge.

@@ -6,10 +6,7 @@ build:
     python: mambaforge-latest
   commands:
     - mamba install -c conda-forge -c nodefaults pixi
-    # A project with the environment variable TRY_JUPYTER_SITE=beta hosts the beta site.
-    - |
-      if [ "$TRY_JUPYTER_SITE" = "beta" ]; then
-        pixi run readthedocs-beta
-      else
-        pixi install && pixi run build && pixi run filter-kernels && pixi run readthedocs
-      fi
+    - pixi install
+    - pixi run build
+    - pixi run filter-kernels
+    - pixi run readthedocs

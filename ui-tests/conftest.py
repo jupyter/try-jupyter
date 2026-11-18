@@ -21,11 +21,11 @@ def find_free_port() -> int:
 @pytest.fixture(scope="session")
 def dist_dir() -> Path:
     """Return path to the built JupyterLite distribution."""
-    dist_path = Path(os.environ.get("TRY_JUPYTER_DIST", Path(__file__).parent.parent / "dist"))
+    dist_path = Path(__file__).parent.parent / "dist"
     if not dist_path.exists():
         pytest.fail(
             f"Distribution directory not found: {dist_path}\n"
-            "Please run 'pixi run build' (or 'pixi run build-beta' for dist-beta) first."
+            "Please run 'pixi run build' first to build the JupyterLite site."
         )
     return dist_path
 
@@ -62,7 +62,9 @@ def http_server(dist_dir: Path, server_port: int):
 @pytest.fixture(scope="session")
 def base_url(server_port: int) -> str:
     """Return the base URL for accessing JupyterLite."""
-    return f"http://localhost:{server_port}"
+    # TRY_JUPYTER_SITE_PATH=beta tests the beta site inside the stable one.
+    site_path = os.environ.get("TRY_JUPYTER_SITE_PATH", "")
+    return f"http://localhost:{server_port}/{site_path}".rstrip("/")
 
 
 @pytest.fixture(scope="session")
