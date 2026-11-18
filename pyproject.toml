@@ -9,7 +9,7 @@ platforms = ["linux-64", "osx-64", "win-64", "osx-arm64"]
 
 [tool.pixi.tasks]
 clean = "rm -rf .jupyterlite.doit.db .beta dist"
-build = "jupyter lite build"
+build = "jupyter lite build --no-sourcemaps"
 filter-kernels = "python scripts/filter_xeus_kernels.py dist"
 add-plausible = "python scripts/add_plausible.py dist"
 test = "pytest"
