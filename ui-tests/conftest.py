@@ -25,7 +25,7 @@ def dist_dir() -> Path:
     if not dist_path.exists():
         pytest.fail(
             f"Distribution directory not found: {dist_path}\n"
-            "Please run 'pixi run build' first to build the JupyterLite site."
+            "Please run 'pixi run build' (or 'pixi run build-beta' for dist-beta) first."
         )
     return dist_path
 

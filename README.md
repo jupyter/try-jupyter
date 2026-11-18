@@ -22,7 +22,9 @@ The notebooks in this repository are written with [JupyterLite kernels](https://
 As such, the easiest way to make edits to them is to do so [**via the Try Jupyter Page**](https://jupyter.org/try-jupyter).
 Make the edits you wish at that URL, then download the notebook and replace the one in a repository locally.
 
-### Beta deployment
+### Beta site
 
-The beta site at https://jupyter.org/try-jupyter/beta/ serves the same notebooks with the pre-releases of JupyterLite, JupyterLab and Jupyter Notebook.
-`pixi run build-beta` builds it into `dist/beta` from the `beta` environment, whose pins and conda-forge label channels are in `pyproject.toml`.
+The `beta` environment builds the same notebooks with the pre-releases of JupyterLite, JupyterLab and Jupyter Notebook.
+`pixi run build-beta` builds it into `dist-beta`, and a Read the Docs project with the environment variable `TRY_JUPYTER_SITE=beta` publishes it.
+To follow a newer pre-release of a package, set its label channel (`_alpha`, `_beta` or `_rc`) and its lower bound in `pyproject.toml`, then run `pixi update -e beta`.
+Remove the label channel of a package once its final release is on conda-forge.

@@ -24,17 +24,11 @@ jobs:
         with:
           pixi-version: v0.71.0
           cache: true
-          environments: default beta
       - name: Build the JupyterLite site
         shell: bash -l {0}
         run: |
           cp README.md content
           pixi run build
-
-      - name: Build the beta JupyterLite site
-        shell: bash -l {0}
-        run: |
-          pixi run build-beta
 
       - name: Filter xeus kernels to only keep C++23
         shell: bash -l {0}
@@ -108,8 +102,32 @@ jobs:
             ui-tests/test-results
           if-no-files-found: ignore
 
+  build-beta:
+    runs-on: ubuntu-latest
+    # Pre-releases may break the build: report it without blocking the deployment.
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: prefix-dev/setup-pixi@v0.9.3
+        with:
+          pixi-version: v0.71.0
+          cache: true
+          environments: beta
+      - name: Build the beta JupyterLite site
+        shell: bash -l {0}
+        run: |
+          cp README.md content
+          pixi run build-beta
+
+      - name: Upload the beta site for testing
+        uses: actions/upload-artifact@v4
+        with:
+          name: jupyterlite-dist-beta
+          path: ./dist-beta
+
   test-beta:
-    needs: build
+    needs: build-beta
     runs-on: ubuntu-latest
     timeout-minutes: 30
     # Pre-releases may break notebooks: report it without blocking the deployment.
@@ -128,8 +146,8 @@ jobs:
       - name: Download built site
         uses: actions/download-artifact@v4
         with:
-          name: jupyterlite-dist
-          path: ./dist
+          name: jupyterlite-dist-beta
+          path: ./dist-beta
 
       - name: Install Playwright browsers
         shell: bash -l {0}
@@ -139,7 +157,7 @@ jobs:
       - name: Run notebook tests
         shell: bash -l {0}
         env:
-          TRY_JUPYTER_DIST: dist/beta
+          TRY_JUPYTER_DIST: dist-beta
         run: |
           pixi run test
 
