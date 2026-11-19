@@ -3,11 +3,13 @@
 Post-build script to filter xeus kernels.
 
 This script modifies the built JupyterLite site to only include
-the selected kernels (C++23, R, Python, SQLite, Fortran) from the xeus kernels list.
+the selected kernels (C++23, R, Python, SQLite, Fortran) from the xeus kernels list,
+and deletes the files of the other kernels.
 """
 
 import argparse
 import json
+import shutil
 from pathlib import Path
 
 # Kernels to keep
@@ -36,6 +38,17 @@ def filter_kernels(dist_dir: Path) -> None:
         json.dump(filtered_kernels, f)
 
     print(f"Updated {kernels_file}")
+
+    # Each kernel folder holds its own copy of the kernel libraries, up to 71 MB.
+    kept_envs = {k["env_name"] for k in filtered_kernels}
+    for kernel in kernels:
+        if kernel["kernel"] in KERNELS_TO_KEEP:
+            continue
+        env_dir = xeus_dir / kernel["env_name"]
+        target = env_dir / kernel["kernel"] if kernel["env_name"] in kept_envs else env_dir
+        if target.exists():
+            shutil.rmtree(target)
+            print(f"Removed {target}")
 
 
 def main() -> None:
