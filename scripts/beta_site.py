@@ -16,9 +16,6 @@ from pathlib import Path
 
 SUFFIX = " (beta)"
 
-# The LFortran kernel binary alone takes 77 MB, more than the size limit leaves.
-SKIPPED_KERNELS = {"fortran"}
-
 
 def mark_beta(beta_dir: Path) -> None:
     """Append the beta suffix to the application name of the site."""
@@ -42,7 +39,6 @@ def reuse_stable_kernels(stable_dir: Path, beta_dir: Path) -> None:
         return
 
     kernels = json.loads(kernels_file.read_text())
-    kernels = [k for k in kernels if k["kernel"] not in SKIPPED_KERNELS]
     # jupyterlite-xeus joins the environment name to the site URL, so this
     # relative name reaches the environment folders of the stable site.
     prefix = os.path.relpath(stable_xeus, beta_xeus)
