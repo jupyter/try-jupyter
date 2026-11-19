@@ -57,6 +57,10 @@ channels = [
   "conda-forge",
 ]
 
+[tool.pixi.feature.beta.activation.env]
+# Same as for the stable site: jupyterlite-terminal 1.7 runs cockle 1.8 on Emscripten 4.
+COCKLE_WASM_CHANNELS = "https://prefix.dev/emscripten-forge-4x,conda-forge"
+
 [tool.pixi.feature.beta.tasks]
 # jupyter lite build stores its doit cache in the working directory, so the beta build runs in .beta.
 build-beta = "rm -rf .beta dist/beta && mkdir .beta && cd .beta && jupyter lite build --lite-dir .. --output-dir ../dist/beta --no-sourcemaps --disable-addons=jupyterlite-xeus && python ../scripts/beta_site.py ../dist ../dist/beta"
