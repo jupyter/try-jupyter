@@ -19,10 +19,9 @@ SUFFIX = " (beta)"
 TOP_BAR = "@jupyterlab/application-extension:top-bar"
 BADGE_STYLE = """<style>
   #jp-top-bar [data-jp-item-name="beta"] .jp-ToolbarButtonComponent-label {
-    padding: 2px 6px;
+    padding: 1px 6px;
+    border: 1px solid var(--jp-warn-color1, #f57c00);
     border-radius: 9px;
-    background: var(--jp-warn-color1, #f57c00);
-    color: #000;
     font-size: var(--jp-ui-font-size0);
     font-weight: 600;
     letter-spacing: 0.05em;
