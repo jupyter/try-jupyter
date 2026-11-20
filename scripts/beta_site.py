@@ -2,10 +2,11 @@
 """
 Post-build script for the beta site, built into a subfolder of the stable site.
 
-This script appends " (beta)" to the application name, and makes the beta site
-load the xeus kernel packages of the stable site, so that both sites fit in the
-size limit of GitHub Pages. The beta site keeps its own copy of the kernel
-binaries and logos, which jupyterlite-xeus looks up relative to the site.
+This script appends " (beta)" to the application name, adds a Beta item to the
+top bar, and makes the beta site load the xeus kernel packages of the stable
+site, so that both sites fit in the size limit of GitHub Pages. The beta site
+keeps its own copy of the kernel binaries and logos, which jupyterlite-xeus
+looks up relative to the site.
 """
 
 import argparse
@@ -15,18 +16,37 @@ import shutil
 from pathlib import Path
 
 SUFFIX = " (beta)"
+TOP_BAR = "@jupyterlab/application-extension:top-bar"
 
 
 def mark_beta(beta_dir: Path) -> None:
-    """Append the beta suffix to the application name of the site."""
+    """Mark the site as the beta in its application name and its top bar."""
     config_file = beta_dir / "jupyter-lite.json"
     config = json.loads(config_file.read_text())
     data = config["jupyter-config-data"]
     name = data.get("appName", "JupyterLite")
     if not name.endswith(SUFFIX):
         data["appName"] = name + SUFFIX
-        config_file.write_text(json.dumps(config, indent=2))
-    print(f"Application name: {data['appName']}")
+
+    versions = [f"JupyterLite {data.get('appVersion', 'unknown')}"]
+    for info in data.get("versionInfo", {}).values():
+        versions.append(f"{info['label']} {info['version']}")
+    items = [
+        {
+            "name": "beta",
+            "command": "application:about",
+            "label": "Beta",
+            "caption": ", ".join(versions),
+            "rank": 60,
+        }
+    ]
+    overrides = data.setdefault("settingsOverrides", {})
+    toolbar = overrides.setdefault(TOP_BAR, {}).setdefault("toolbar", [])
+    names = {item["name"] for item in items}
+    toolbar[:] = [item for item in toolbar if item.get("name") not in names] + items
+
+    config_file.write_text(json.dumps(config, indent=2))
+    print(f"Application name: {data['appName']}, top bar items: {sorted(names)}")
 
 
 def reuse_stable_kernels(stable_dir: Path, beta_dir: Path) -> None:
