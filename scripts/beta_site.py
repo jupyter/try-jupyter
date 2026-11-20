@@ -2,11 +2,11 @@
 """
 Post-build script for the beta site, built into a subfolder of the stable site.
 
-This script appends " (beta)" to the application name, adds Beta and Report a
-Problem items to the top bar, and makes the beta site load the xeus kernel
-packages of the stable site, so that both sites fit in the size limit of GitHub
-Pages. The beta site keeps its own copy of the kernel binaries and logos, which
-jupyterlite-xeus looks up relative to the site.
+This script appends " (beta)" to the application name, adds a Beta badge and a
+Report a Problem button to the top bar, and makes the beta site load the xeus
+kernel packages of the stable site, so that both sites fit in the size limit of
+GitHub Pages. The beta site keeps its own copy of the kernel binaries and logos,
+which jupyterlite-xeus looks up relative to the site.
 """
 
 import argparse
@@ -17,6 +17,20 @@ from pathlib import Path
 
 SUFFIX = " (beta)"
 TOP_BAR = "@jupyterlab/application-extension:top-bar"
+BADGE_STYLE = """<style>
+  #jp-top-bar [data-jp-item-name="beta"] .jp-ToolbarButtonComponent-label {
+    padding: 2px 6px;
+    border-radius: 9px;
+    background: var(--jp-warn-color1, #f57c00);
+    color: #000;
+    font-size: var(--jp-ui-font-size0);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+</style>
+"""
 
 
 def mark_beta(beta_dir: Path) -> None:
@@ -55,6 +69,16 @@ def mark_beta(beta_dir: Path) -> None:
 
     config_file.write_text(json.dumps(config, indent=2))
     print(f"Application name: {data['appName']}, top bar items: {sorted(names)}")
+
+
+def style_badge(beta_dir: Path) -> None:
+    """Add the style of the Beta badge to the page of every app."""
+    pages = sorted(beta_dir.glob("*/index.html"))
+    for page in pages:
+        html = page.read_text()
+        if BADGE_STYLE not in html:
+            page.write_text(html.replace("</head>", BADGE_STYLE + "</head>", 1))
+    print(f"Badge style in: {[page.parent.name for page in pages]}")
 
 
 def reuse_stable_kernels(stable_dir: Path, beta_dir: Path) -> None:
@@ -103,6 +127,7 @@ def main() -> None:
             return
 
     mark_beta(args.beta_dir)
+    style_badge(args.beta_dir)
     reuse_stable_kernels(args.stable_dir, args.beta_dir)
     print("Done!")
 
