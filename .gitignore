@@ -121,7 +121,6 @@ _output
 
 # JupyterLite terminal
 cockle-config.json
-.cockle_temp/
 cockle_wasm_env/
 
 # UI tests
