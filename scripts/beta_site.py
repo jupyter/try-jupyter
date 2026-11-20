@@ -2,11 +2,11 @@
 """
 Post-build script for the beta site, built into a subfolder of the stable site.
 
-This script appends " (beta)" to the application name, adds a Beta item to the
-top bar, and makes the beta site load the xeus kernel packages of the stable
-site, so that both sites fit in the size limit of GitHub Pages. The beta site
-keeps its own copy of the kernel binaries and logos, which jupyterlite-xeus
-looks up relative to the site.
+This script appends " (beta)" to the application name, adds Beta and Report a
+Problem items to the top bar, and makes the beta site load the xeus kernel
+packages of the stable site, so that both sites fit in the size limit of GitHub
+Pages. The beta site keeps its own copy of the kernel binaries and logos, which
+jupyterlite-xeus looks up relative to the site.
 """
 
 import argparse
@@ -38,7 +38,15 @@ def mark_beta(beta_dir: Path) -> None:
             "label": "Beta",
             "caption": ", ".join(versions),
             "rank": 60,
-        }
+        },
+        # The toolbar hides this item when the feedback extension is not installed.
+        {
+            "name": "report-problem",
+            "command": "try-jupyter:report-problem",
+            "label": "Report a Problem",
+            "icon": "ui-components:bug",
+            "rank": 61,
+        },
     ]
     overrides = data.setdefault("settingsOverrides", {})
     toolbar = overrides.setdefault(TOP_BAR, {}).setdefault("toolbar", [])
