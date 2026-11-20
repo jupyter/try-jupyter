@@ -1,7 +1,12 @@
 {
   "packages": {
+    "awk": {},
+    "findutils": {
+      "modules": {
+        "find": {}
+      }
+    },
     "git2cpp": {},
-    "lua": {},
     "nano": {},
     "tree": {},
     "vim": {}
