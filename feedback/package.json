@@ -1,0 +1,13 @@
+{
+  "name": "try-jupyter-feedback",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ask one question, then open a pre-filled issue in the repository of the broken part",
+  "license": "BSD-3-Clause",
+  "jupyterlab": {
+    "_build": {
+      "load": "static/remoteEntry.js",
+      "extension": "./extension"
+    }
+  }
+}
