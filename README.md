@@ -28,3 +28,8 @@ The beta site at https://jupyter.org/try-jupyter/beta/ serves the same notebooks
 `pixi run build-beta` builds it into `dist/beta` after `pixi run build`, and it loads the xeus kernel packages of the stable site to stay within the 1 GB limit of GitHub Pages.
 To follow a newer pre-release of a package, set its label channel (`_alpha`, `_beta` or `_rc`) and its lower bound in `pyproject.toml`, then run `pixi update -e beta`.
 Remove the label channel of a package once its final release is on conda-forge.
+
+### Report a Problem dialog
+
+The `feedback` folder holds a prebuilt JupyterLab extension, written by hand in `feedback/static/remoteEntry.js` so that it needs no build.
+It adds **Help > Report a Problem…**, which asks what the problem is about and opens a pre-filled issue in the repository that matches the answer.
