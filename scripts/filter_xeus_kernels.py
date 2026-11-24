@@ -12,7 +12,7 @@ import json
 import shutil
 from pathlib import Path
 
-# Kernels to keep
+# Kernels to keep; keep in step with XEUS_KERNELS in feedback/static/remoteEntry.js
 KERNELS_TO_KEEP = {"xcpp23", "xc23", "xr", "xpython", "xsqlite", "fortran"}
 
 
