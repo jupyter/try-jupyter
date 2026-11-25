@@ -4,6 +4,8 @@
   'use strict';
 
   const NAME = 'try-jupyter-feedback';
+  // The translator replaces only the first hyphen of a domain, so this one uses underscores.
+  const DOMAIN = 'try_jupyter_feedback';
   const COMMAND = 'try-jupyter:report-problem';
 
   // Keep in step with KERNELS_TO_KEEP in scripts/filter_xeus_kernels.py.
@@ -282,10 +284,10 @@
     autoStart: true,
     activate: (app, translator) => {
       translator = translator || translation.nullTranslator;
-      const trans = translator.load(NAME);
+      const trans = translator.load(DOMAIN);
       const strings = TRANSLATIONS[translator.languageCode];
       if (strings) {
-        trans.loadJSON(strings, NAME);
+        trans.loadJSON(strings, DOMAIN);
       }
       app.commands.addCommand(COMMAND, {
         label: trans.__('Report a Problem…'),
