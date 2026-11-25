@@ -1,5 +1,5 @@
 // A prebuilt JupyterLab extension written by hand, so the site needs no build step:
-// it uses only the application object and the page, and no shared packages.
+// it uses the application object, the page, and the translator from the shared packages.
 (function () {
   'use strict';
 
@@ -17,59 +17,61 @@
   ]);
 
   // Language packs only cover published extensions, so this one carries its own translations.
+  // Each header copies the language code and plural rule of the matching language pack.
   const TRANSLATIONS = {
-    fr: {
-      'Report a Problem…': 'Signaler un problème…',
-      'Report a Problem': 'Signaler un problème',
-      'What is the problem about?': 'Sur quoi porte le problème ?',
-      'The Jupyter Notebook interface: menus, editing, layout':
-        "L'interface de Jupyter Notebook : menus, édition, mise en page",
-      'The JupyterLab interface: menus, editing, layout':
-        "L'interface de JupyterLab : menus, édition, mise en page",
-      'Running code in the %1 kernel': "L'exécution de code dans le noyau %1",
-      'Running code': "L'exécution de code",
-      'Opening, saving or uploading files':
-        "L'ouverture, l'enregistrement ou le téléversement de fichiers",
-      'The terminal': 'Le terminal',
-      'The AI assistant': "L'assistant IA",
-      'An example notebook, or I am not sure':
-        "Un notebook d'exemple, ou je ne sais pas",
+    'fr-FR': {
+      '': { language: 'fr-FR', pluralForms: 'nplurals=2; plural=(n > 1);' },
+      'Report a Problem…': ['Signaler un problème…'],
+      'Report a Problem': ['Signaler un problème'],
+      'What is the problem about?': ['Sur quoi porte le problème ?'],
+      'The Jupyter Notebook interface: menus, editing, layout': [
+        "L'interface de Jupyter Notebook : menus, édition, mise en page"
+      ],
+      'The JupyterLab interface: menus, editing, layout': [
+        "L'interface de JupyterLab : menus, édition, mise en page"
+      ],
+      'Running code in the %1 kernel': ["L'exécution de code dans le noyau %1"],
+      'Running code': ["L'exécution de code"],
+      'Opening, saving or uploading files': [
+        "L'ouverture, l'enregistrement ou le téléversement de fichiers"
+      ],
+      'The terminal': ['Le terminal'],
+      'The AI assistant': ["L'assistant IA"],
+      'An example notebook, or I am not sure': [
+        "Un notebook d'exemple, ou je ne sais pas"
+      ],
       'This opens a new GitHub issue with the details of this page filled in, and copies the details to the clipboard. You need a GitHub account to submit the issue.':
-        "Cela ouvre un nouveau ticket GitHub prérempli avec les détails de cette page, et copie ces détails dans le presse-papiers. Vous avez besoin d'un compte GitHub pour soumettre le ticket.",
-      Cancel: 'Annuler',
-      'Continue on GitHub': 'Continuer sur GitHub'
+        [
+          "Cela ouvre un nouveau ticket GitHub prérempli avec les détails de cette page, et copie ces détails dans le presse-papiers. Vous avez besoin d'un compte GitHub pour soumettre le ticket."
+        ],
+      Cancel: ['Annuler'],
+      'Continue on GitHub': ['Continuer sur GitHub']
     },
-    'zh-cn': {
-      'Report a Problem…': '报告问题…',
-      'Report a Problem': '报告问题',
-      'What is the problem about?': '问题与哪方面有关？',
-      'The Jupyter Notebook interface: menus, editing, layout':
-        'Jupyter Notebook 界面：菜单、编辑、布局',
-      'The JupyterLab interface: menus, editing, layout':
-        'JupyterLab 界面：菜单、编辑、布局',
-      'Running code in the %1 kernel': '在 %1 内核中运行代码',
-      'Running code': '运行代码',
-      'Opening, saving or uploading files': '打开、保存或上传文件',
-      'The terminal': '终端',
-      'The AI assistant': 'AI 助手',
-      'An example notebook, or I am not sure': '示例笔记本，或者我不确定',
+    'zh-CN': {
+      '': { language: 'zh-CN', pluralForms: 'nplurals=1; plural=0;' },
+      'Report a Problem…': ['报告问题…'],
+      'Report a Problem': ['报告问题'],
+      'What is the problem about?': ['问题与哪方面有关？'],
+      'The Jupyter Notebook interface: menus, editing, layout': [
+        'Jupyter Notebook 界面：菜单、编辑、布局'
+      ],
+      'The JupyterLab interface: menus, editing, layout': [
+        'JupyterLab 界面：菜单、编辑、布局'
+      ],
+      'Running code in the %1 kernel': ['在 %1 内核中运行代码'],
+      'Running code': ['运行代码'],
+      'Opening, saving or uploading files': ['打开、保存或上传文件'],
+      'The terminal': ['终端'],
+      'The AI assistant': ['AI 助手'],
+      'An example notebook, or I am not sure': ['示例笔记本，或者我不确定'],
       'This opens a new GitHub issue with the details of this page filled in, and copies the details to the clipboard. You need a GitHub account to submit the issue.':
-        '这将打开一个新的 GitHub 议题并预先填入此页面的详细信息，同时将这些信息复制到剪贴板。您需要一个 GitHub 账号才能提交议题。',
-      Cancel: '取消',
-      'Continue on GitHub': '在 GitHub 上继续'
+        [
+          '这将打开一个新的 GitHub 议题并预先填入此页面的详细信息，同时将这些信息复制到剪贴板。您需要一个 GitHub 账号才能提交议题。'
+        ],
+      Cancel: ['取消'],
+      'Continue on GitHub': ['在 GitHub 上继续']
     }
   };
-
-  // JupyterLab sets the lang attribute of the page from its Language setting.
-  function __(text, ...args) {
-    const language = document.documentElement.lang.toLowerCase();
-    const strings =
-      TRANSLATIONS[language] || TRANSLATIONS[language.split('-')[0]] || {};
-    return args.reduce(
-      (result, arg, index) => result.replace(`%${index + 1}`, arg),
-      strings[text] || text
-    );
-  }
 
   function pageConfig() {
     const node = document.getElementById('jupyter-config-data');
@@ -79,7 +81,7 @@
   // An answer to the question, and the repository that receives the report.
   // Repositories that disable blank issues send an issue URL without a
   // template to their template chooser, so they get a template.
-  function choices(context) {
+  function choices(context, trans) {
     let kernelRepository = 'jupyter/try-jupyter';
     if (context.kernelName === 'python') {
       kernelRepository = 'jupyterlite/pyodide-kernel';
@@ -89,33 +91,35 @@
     return [
       context.notebookInterface
         ? {
-            label: __('The Jupyter Notebook interface: menus, editing, layout'),
+            label: trans.__(
+              'The Jupyter Notebook interface: menus, editing, layout'
+            ),
             repository: 'jupyter/notebook',
             template: 'bug_report.md'
           }
         : {
-            label: __('The JupyterLab interface: menus, editing, layout'),
+            label: trans.__('The JupyterLab interface: menus, editing, layout'),
             repository: 'jupyterlab/jupyterlab',
             template: 'bug_report.md'
           },
       {
         label: context.kernelDisplayName
-          ? __('Running code in the %1 kernel', context.kernelDisplayName)
-          : __('Running code'),
+          ? trans.__('Running code in the %1 kernel', context.kernelDisplayName)
+          : trans.__('Running code'),
         repository: kernelRepository
       },
       {
-        label: __('Opening, saving or uploading files'),
+        label: trans.__('Opening, saving or uploading files'),
         repository: 'jupyterlite/jupyterlite'
       },
-      { label: __('The terminal'), repository: 'jupyterlite/terminal' },
+      { label: trans.__('The terminal'), repository: 'jupyterlite/terminal' },
       {
-        label: __('The AI assistant'),
+        label: trans.__('The AI assistant'),
         repository: 'jupyterlab/jupyter-ai-lite',
         template: 'bug_report.md'
       },
       {
-        label: __('An example notebook, or I am not sure'),
+        label: trans.__('An example notebook, or I am not sure'),
         repository: 'jupyter/try-jupyter'
       }
     ];
@@ -139,7 +143,7 @@
       '',
       `- Found on: ${location.origin}${location.pathname}`,
       `- Interface: ${ui}`,
-      `- Language: ${document.documentElement.lang || 'en'}`,
+      `- Language: ${context.language}`,
       `- JupyterLite: ${config.appVersion || 'unknown'}`,
       `- Kernel: ${context.kernelDisplayName || 'none'}`,
       `- Browser: ${navigator.userAgent}`
@@ -170,7 +174,7 @@
 
   // A modal dialog with the markup and classes of JupyterLab dialogs.
   // Resolves to the index of the chosen answer, or null when cancelled.
-  function ask(options) {
+  function ask(options, trans) {
     // A modal dialog gets the size limits and the border of the browser's dialog style.
     const dialog = element(
       'dialog',
@@ -181,7 +185,11 @@
     dialog.setAttribute('aria-labelledby', 'jp-TryJupyterFeedback-title');
     const form = element('form', 'jp-Dialog-content');
     form.method = 'dialog';
-    const header = element('div', 'jp-Dialog-header', __('Report a Problem'));
+    const header = element(
+      'div',
+      'jp-Dialog-header',
+      trans.__('Report a Problem')
+    );
     header.id = 'jp-TryJupyterFeedback-title';
     const body = element('div', 'jp-Dialog-body', '', 'max-width: 480px');
     const fieldset = element(
@@ -194,7 +202,7 @@
       element(
         'legend',
         '',
-        __('What is the problem about?'),
+        trans.__('What is the problem about?'),
         'padding: 0; margin-bottom: 8px'
       )
     );
@@ -219,7 +227,7 @@
       element(
         'p',
         '',
-        __(
+        trans.__(
           'This opens a new GitHub issue with the details of this page filled in, and copies the details to the clipboard. You need a GitHub account to submit the issue.'
         ),
         'color: var(--jp-ui-font-color2)'
@@ -227,8 +235,8 @@
     );
     const buttons = element('div', 'jp-Dialog-footerButtons');
     for (const [value, className, text] of [
-      ['cancel', 'jp-mod-reject', __('Cancel')],
-      ['accept', 'jp-mod-accept', __('Continue on GitHub')]
+      ['cancel', 'jp-mod-reject', trans.__('Cancel')],
+      ['accept', 'jp-mod-accept', trans.__('Continue on GitHub')]
     ]) {
       const button = element(
         'button',
@@ -272,9 +280,15 @@
     description:
       'Asks one question, then opens a pre-filled issue in the repository of the broken part.',
     autoStart: true,
-    activate: app => {
+    activate: (app, translator) => {
+      translator = translator || translation.nullTranslator;
+      const trans = translator.load(NAME);
+      const strings = TRANSLATIONS[translator.languageCode];
+      if (strings) {
+        trans.loadJSON(strings, NAME);
+      }
       app.commands.addCommand(COMMAND, {
-        label: () => __('Report a Problem…'),
+        label: trans.__('Report a Problem…'),
         execute: async () => {
           const widget = app.shell.currentWidget;
           const sessionContext = widget && widget.sessionContext;
@@ -284,13 +298,14 @@
             sessionContext.session.kernel;
           const context = {
             notebookInterface: !!pageConfig().notebookPage,
+            language: translator.languageCode,
             kernelName: kernel ? kernel.name : null,
             kernelDisplayName: kernel
               ? sessionContext.kernelDisplayName || kernel.name
               : null
           };
-          const options = choices(context);
-          const index = await ask(options);
+          const options = choices(context, trans);
+          const index = await ask(options, trans);
           if (index === null) {
             return;
           }
@@ -306,9 +321,15 @@
   };
 
   // The module federation container interface that JupyterLab loads extensions through.
+  let translation;
   window._JUPYTERLAB = window._JUPYTERLAB || {};
   window._JUPYTERLAB[NAME] = {
-    init: () => undefined,
+    init: async shareScope => {
+      // The application's own copy of the package holds the token of its translator.
+      const [shared] = Object.values(shareScope['@jupyterlab/translation']);
+      translation = (await shared.get())();
+      plugin.optional = [translation.ITranslator];
+    },
     get: () => Promise.resolve(() => ({ __esModule: true, default: [plugin] }))
   };
 })();
