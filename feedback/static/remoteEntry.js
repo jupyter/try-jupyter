@@ -22,15 +22,16 @@
   // Each header copies the language code and plural rule of the matching language pack.
   const TRANSLATIONS = {
     'fr-FR': {
+      // French puts a no-break space before "?" and ":".
       '': { language: 'fr-FR', pluralForms: 'nplurals=2; plural=(n > 1);' },
       'Report a Problem…': ['Signaler un problème…'],
       'Report a Problem': ['Signaler un problème'],
-      'What is the problem about?': ['Sur quoi porte le problème ?'],
+      'What is the problem about?': ['Sur quoi porte le problème\u00a0?'],
       'The Jupyter Notebook interface: menus, editing, layout': [
-        "L'interface de Jupyter Notebook : menus, édition, mise en page"
+        "L'interface de Jupyter Notebook\u00a0: menus, édition, disposition"
       ],
       'The JupyterLab interface: menus, editing, layout': [
-        "L'interface de JupyterLab : menus, édition, mise en page"
+        "L'interface de JupyterLab\u00a0: menus, édition, disposition"
       ],
       'Running code in the %1 kernel': ["L'exécution de code dans le noyau %1"],
       'Running code': ["L'exécution de code"],
@@ -44,7 +45,7 @@
       ],
       'This opens a new GitHub issue with the details of this page filled in, and copies the details to the clipboard. You need a GitHub account to submit the issue.':
         [
-          "Cela ouvre un nouveau ticket GitHub prérempli avec les détails de cette page, et copie ces détails dans le presse-papiers. Vous avez besoin d'un compte GitHub pour soumettre le ticket."
+          "Cela ouvre un nouveau ticket GitHub prérempli avec les détails de cette page et copie ces détails dans le presse-papiers. Vous avez besoin d'un compte GitHub pour soumettre le ticket."
         ],
       Cancel: ['Annuler'],
       'Continue on GitHub': ['Continuer sur GitHub']
