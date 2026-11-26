@@ -1289,9 +1289,9 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-4.26.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-specifications-2025.9.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-with-format-nongpl-4.26.0-hcf101f3_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-agent-lite-0.21.0-pyh5ded981_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-lite-0.21.0-pyh78a2f47_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-persona-manager-0.3.0-pyhb6f2a46_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-agent-lite-0.22.0-pyh5ded981_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-lite-0.22.0-pyhcc75389_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-persona-manager-0.4.0-pyhb6f2a46_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-router-0.1.1-pyhb6f2a46_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-builder-1.0.2-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-chat-components-0.7.0-pyh5ded981_0.conda
@@ -1308,7 +1308,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-4.6.4-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-ai-commands-0.4.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-cell-input-footer-0.3.2-pyhcf101f3_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-chat-0.25.3-pyh5ded981_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-chat-0.26.1-pyh5ded981_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-diff-0.7.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-eventlistener-0.4.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-fasta-3.3.0-pyhd8ed1ab_1.conda
@@ -1323,7 +1323,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlite-pyodide-kernel-0.8.7-pyh5ded981_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlite-terminal-1.8.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlite-xeus-5.1.0-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyternaut-lite-0.21.0-pyhe270607_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyternaut-lite-0.22.0-pyh49dd72d_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/lark-1.3.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/markdown-it-py-3.0.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/matplotlib-inline-0.2.2-pyhd8ed1ab_0.conda
@@ -1486,9 +1486,9 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-4.26.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-specifications-2025.9.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-with-format-nongpl-4.26.0-hcf101f3_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-agent-lite-0.21.0-pyh5ded981_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-lite-0.21.0-pyh78a2f47_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-persona-manager-0.3.0-pyhb6f2a46_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-agent-lite-0.22.0-pyh5ded981_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-lite-0.22.0-pyhcc75389_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-persona-manager-0.4.0-pyhb6f2a46_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-router-0.1.1-pyhb6f2a46_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-builder-1.0.2-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-chat-components-0.7.0-pyh5ded981_0.conda
@@ -1505,7 +1505,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-4.6.4-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-ai-commands-0.4.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-cell-input-footer-0.3.2-pyhcf101f3_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-chat-0.25.3-pyh5ded981_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-chat-0.26.1-pyh5ded981_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-diff-0.7.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-eventlistener-0.4.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-fasta-3.3.0-pyhd8ed1ab_1.conda
@@ -1520,7 +1520,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlite-pyodide-kernel-0.8.7-pyh5ded981_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlite-terminal-1.8.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlite-xeus-5.1.0-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyternaut-lite-0.21.0-pyhe270607_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyternaut-lite-0.22.0-pyh49dd72d_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/lark-1.3.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/markdown-it-py-3.0.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/matplotlib-inline-0.2.2-pyhd8ed1ab_0.conda
@@ -1782,9 +1782,9 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-4.26.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-specifications-2025.9.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-with-format-nongpl-4.26.0-hcf101f3_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-agent-lite-0.21.0-pyh5ded981_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-lite-0.21.0-pyh78a2f47_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-persona-manager-0.3.0-pyhb6f2a46_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-agent-lite-0.22.0-pyh5ded981_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-lite-0.22.0-pyhcc75389_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-persona-manager-0.4.0-pyhb6f2a46_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-router-0.1.1-pyhb6f2a46_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-builder-1.0.2-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-chat-components-0.7.0-pyh5ded981_0.conda
@@ -1801,7 +1801,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-4.6.4-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-ai-commands-0.4.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-cell-input-footer-0.3.2-pyhcf101f3_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-chat-0.25.3-pyh5ded981_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-chat-0.26.1-pyh5ded981_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-diff-0.7.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-eventlistener-0.4.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-fasta-3.3.0-pyhd8ed1ab_1.conda
@@ -1816,7 +1816,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlite-pyodide-kernel-0.8.7-pyh5ded981_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlite-terminal-1.8.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlite-xeus-5.1.0-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyternaut-lite-0.21.0-pyhe270607_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyternaut-lite-0.22.0-pyh49dd72d_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/lark-1.3.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/markdown-it-py-3.0.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/matplotlib-inline-0.2.2-pyhd8ed1ab_0.conda
@@ -2077,9 +2077,9 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-4.26.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-specifications-2025.9.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jsonschema-with-format-nongpl-4.26.0-hcf101f3_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-agent-lite-0.21.0-pyh5ded981_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-lite-0.21.0-pyh78a2f47_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-persona-manager-0.3.0-pyhb6f2a46_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-agent-lite-0.22.0-pyh5ded981_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-lite-0.22.0-pyhcc75389_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-persona-manager-0.4.0-pyhb6f2a46_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-router-0.1.1-pyhb6f2a46_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-builder-1.0.2-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-chat-components-0.7.0-pyh5ded981_0.conda
@@ -2096,7 +2096,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-4.6.4-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-ai-commands-0.4.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-cell-input-footer-0.3.2-pyhcf101f3_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-chat-0.25.3-pyh5ded981_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-chat-0.26.1-pyh5ded981_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-diff-0.7.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-eventlistener-0.4.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-fasta-3.3.0-pyhd8ed1ab_1.conda
@@ -2111,7 +2111,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlite-pyodide-kernel-0.8.7-pyh5ded981_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlite-terminal-1.8.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlite-xeus-5.1.0-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyternaut-lite-0.21.0-pyhe270607_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/jupyternaut-lite-0.22.0-pyh49dd72d_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/lark-1.3.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/markdown-it-py-3.0.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/matplotlib-inline-0.2.2-pyhd8ed1ab_0.conda
@@ -7452,19 +7452,6 @@ packages:
   run_exports: {}
   size: 4809
   timestamp: 1787579299493
-- conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-agent-lite-0.21.0-pyh5ded981_0.conda
-  sha256: 70e4290c00a913273bfde95981bee35bf13b6fc9e5b6ba3b5abd0abbe2f492b8
-  md5: 95623ffda2c5b5030a24d5a26b22b9c7
-  depends:
-  - python >=3.11
-  - jupyterlab-ai-commands >=0.4.0,<0.5
-  - python
-  license: BSD-3-Clause
-  purls:
-  - pkg:pypi/jupyter-ai-agent-lite?source=hash-mapping
-  run_exports: {}
-  size: 114704
-  timestamp: 1792762175439
 - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-agent-lite-0.22.0-pyh5ded981_0.conda
   sha256: 51e0e07485a004e28dd70ab6231407556bc8a6f22bed402aed7e883ee7c2eaa1
   md5: 238df7bff0ed49e4a8aa4b039caed8a8
@@ -7478,19 +7465,6 @@ packages:
   run_exports: {}
   size: 142418
   timestamp: 1795614616546
-- conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-lite-0.21.0-pyh78a2f47_0.conda
-  sha256: ade68cc0f7547e21648bd45b3a0cc35928ad669ddfa22d68c80c4f6a6eeea7aa
-  md5: e41b1bd79d7e9c577205d846a98ff5fd
-  depends:
-  - python >=3.11
-  - jupyternaut-lite ==0.21.0 pyhe270607_0
-  - python
-  license: BSD-3-Clause
-  purls:
-  - pkg:pypi/jupyter-ai-lite?source=hash-mapping
-  run_exports: {}
-  size: 12660
-  timestamp: 1792762175439
 - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-lite-0.22.0-pyhcc75389_0.conda
   sha256: b748c1d93efe82f7d59dffc20130a2e850afe42f8804d26b89037f15aaec2006
   md5: 54df8f3a611f71d496e47f4948b1275d
@@ -7504,24 +7478,6 @@ packages:
   run_exports: {}
   size: 12652
   timestamp: 1795614616546
-- conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-persona-manager-0.3.0-pyhb6f2a46_0.conda
-  sha256: de5993435f062f0f6d53853768e6aca7abd36548b2d5374eb270bd247928dea3
-  md5: 93542770b7d380dbbd7e1e5a2cbca8b9
-  depends:
-  - python >=3.11
-  - importlib-metadata >=4.0.0
-  - jupyter-ai-router >=0.1.1
-  - jupyter_server >=2.4.0,<3
-  - jupyterlab-chat >=0.25.0
-  - pydantic >=2.0.0
-  - python
-  license: BSD-3-Clause
-  license_family: BSD
-  purls:
-  - pkg:pypi/jupyter-ai-persona-manager?source=hash-mapping
-  run_exports: {}
-  size: 151038
-  timestamp: 1792660345320
 - conda: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-persona-manager-0.4.0-pyhb6f2a46_0.conda
   sha256: de9c5f3321cd7227defda6f72ebf059d251347ea71da1c85bb2fb2992bfe9466
   md5: badbf967530c31d3433110fbcf1ebc83
@@ -7912,23 +7868,6 @@ packages:
   run_exports: {}
   size: 34973
   timestamp: 1763659965330
-- conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-chat-0.25.3-pyh5ded981_0.conda
-  sha256: f3d73b9757389f9cee1c971a6e9ca969ea99aa0c0760afb606b7d2416ae56aea
-  md5: fd7000ab17e9be3ec67344e4f2246fbd
-  depends:
-  - python >=3.11
-  - jupyter_events >=0.6.0
-  - jupyter_server >=2.0.1,<3
-  - jupyter_ydoc >=3.0.0,<5.0.0
-  - pycrdt >=0.12.48,<0.15.0
-  - python
-  license: BSD-3-Clause
-  license_family: BSD
-  purls:
-  - pkg:pypi/jupyterlab-chat?source=hash-mapping
-  run_exports: {}
-  size: 204479
-  timestamp: 1792603664942
 - conda: https://conda.anaconda.org/conda-forge/noarch/jupyterlab-chat-0.26.1-pyh5ded981_0.conda
   sha256: eb980c290bfe598317d9439d744912565e8a6871dc46daa5b89da43d9b1d00d3
   md5: 8dfd3877812afae5d59868825d39a311
@@ -8157,7 +8096,7 @@ packages:
   - python >=3.11
   license: BSD-3-Clause
   purls:
-  - pkg:pypi/jupyterlite-terminal?source=compressed-mapping
+  - pkg:pypi/jupyterlite-terminal?source=hash-mapping
   run_exports: {}
   size: 141147
   timestamp: 1795178676331
@@ -8197,25 +8136,6 @@ packages:
   run_exports: {}
   size: 2627911
   timestamp: 1794224097753
-- conda: https://conda.anaconda.org/conda-forge/noarch/jupyternaut-lite-0.21.0-pyhe270607_0.conda
-  sha256: 387a31bfc572b60148c97e6adca9aee19fd250cfcf9201890e0a6080b3c89ab9
-  md5: 4be92d469ff305db562db283d4d51b11
-  depends:
-  - python >=3.11
-  - jupyter-ai-agent-lite ==0.21.0 pyh5ded981_0
-  - jupyter-ai-persona-manager >=0.3.0a0,<0.4
-  - jupyter-chat-components >=0.7.0,<0.8
-  - jupyter-mcp-manager >=0.2.0,<0.3
-  - jupyter-secrets-manager >=0.5,<0.6
-  - jupyterlab-ai-commands >=0.4.0,<0.5
-  - jupyterlab-chat >=0.25.2,<0.26
-  - python
-  license: BSD-3-Clause
-  purls:
-  - pkg:pypi/jupyternaut-lite?source=hash-mapping
-  run_exports: {}
-  size: 442296
-  timestamp: 1792762175439
 - conda: https://conda.anaconda.org/conda-forge/noarch/jupyternaut-lite-0.22.0-pyh49dd72d_0.conda
   sha256: 3af87cdb35a2e9ce065db569bc60cf88ce5c49695ae690eae52359a4192da97f
   md5: c983bac7408bb4dd3270f251ff503ae4
