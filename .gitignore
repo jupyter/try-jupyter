@@ -114,6 +114,7 @@ dmypy.json
 # jupyterlite
 *.doit.db
 _output
+.beta/
 # pixi environments
 .pixi/*
 !.pixi/config.toml

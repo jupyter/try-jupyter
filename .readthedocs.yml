@@ -9,4 +9,6 @@ build:
     - pixi install
     - pixi run build
     - pixi run filter-kernels
+    # A failed beta build must not fail the preview of the stable site.
+    - pixi run build-beta || rm -rf dist/beta
     - pixi run readthedocs

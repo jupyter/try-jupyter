@@ -1,5 +1,6 @@
 """Pytest configuration and fixtures for JupyterLite UI tests."""
 
+import os
 import socket
 import subprocess
 import time
@@ -61,7 +62,9 @@ def http_server(dist_dir: Path, server_port: int):
 @pytest.fixture(scope="session")
 def base_url(server_port: int) -> str:
     """Return the base URL for accessing JupyterLite."""
-    return f"http://localhost:{server_port}"
+    # TRY_JUPYTER_SITE_PATH=beta tests the beta site inside the stable one.
+    site_path = os.environ.get("TRY_JUPYTER_SITE_PATH", "")
+    return f"http://localhost:{server_port}/{site_path}".rstrip("/")
 
 
 @pytest.fixture(scope="session")
